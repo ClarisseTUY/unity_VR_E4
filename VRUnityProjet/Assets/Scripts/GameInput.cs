@@ -15,8 +15,23 @@ public class GameInput : MonoBehaviour
     {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
 
-        inputVector = inputVector.normalized;
-
         return inputVector;
     }
+
+
+    public float GetRunningState()
+    {
+        float run = playerInputActions.Player.Run.ReadValue<float>();
+
+        return run;
+    }
+
+
+    public float GetJumpingState()
+    {
+        float jump = playerInputActions.Player.Jump.ReadValue<float>();
+
+        return jump;
+    }
+
 }
