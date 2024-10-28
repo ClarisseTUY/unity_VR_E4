@@ -8,12 +8,28 @@ using UnityEngine.UI;
 public class SelectionManager : MonoBehaviour
 {
 
+    public static SelectionManager Instance { get; private set; }   
+
+    public bool onTarget = false;
+
     public GameObject interaction_Info_UI;
     public TMP_Text interaction_text;
 
     private void Start()
     {
         interaction_text = interaction_Info_UI.GetComponent<TMP_Text>();
+    }
+
+    private void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     void Update()
@@ -24,19 +40,26 @@ public class SelectionManager : MonoBehaviour
         {
             var selectionTransform = hit.transform;
 
-            if (selectionTransform.GetComponent<InteractableObject>() && selectionTransform.GetComponent<InteractableObject>().playerInRange)
+            InteractableObject interactable = selectionTransform.GetComponent<InteractableObject>();
+
+            if (interactable && interactable.playerInRange)
             {
-                interaction_text.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
+                onTarget = true;    
+
+                interaction_text.text = interactable.GetItemName();
                 interaction_Info_UI.SetActive(true);
             }
             else
             {
+                onTarget = false;
                 interaction_Info_UI.SetActive(false);
             }
 
         }
         else
         {
+
+            onTarget= false; 
             interaction_Info_UI.SetActive(false);
         }
     }

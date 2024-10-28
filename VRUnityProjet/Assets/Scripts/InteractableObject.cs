@@ -13,6 +13,16 @@ public class InteractableObject : MonoBehaviour
         return ItemName;
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget)
+        {
+            Debug.Log("item added to inventory");
+
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
