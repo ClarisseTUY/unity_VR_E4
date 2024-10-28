@@ -65,7 +65,7 @@ gradle/
 !Assets/**/*.meta
 
 #ingnore les dossiers non nécessaires de XR ToolKit 
-Assets/Samples/XR Interaction Toolkit/2.5.4/
-Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Asset/DemoSceneAssets
+#VRUnityProjet/Assets/Samples/XR Interaction Toolkit/2.5.4/
+VRUnityProjet/Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Asset/DemoSceneAssets
 #Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Asset/Models
-Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Asset/Tunneling Vignette
+VRUnityProjet/Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Asset/Tunneling Vignette
