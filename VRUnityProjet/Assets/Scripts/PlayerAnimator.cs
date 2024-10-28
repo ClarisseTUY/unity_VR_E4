@@ -25,7 +25,5 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool(IS_WALKING, player.IsWalking());
         animator.SetBool(IS_RUNNING, player.IsRunning());
         animator.SetBool(IS_JUMPING, player.IsJumping());
-        animator.SetBool(IS_MOVING_LEFT, player.IsMovingLeft());
-        animator.SetBool(IS_MOVING_RIGHT, player.IsMovingRight()); 
     }
 }
