@@ -30,6 +30,7 @@ Assets/TextMesh Pro/
 *.opendb
 *.VC.db
 *.pidb.meta
+*.meta
 
 # Mono auto generated files
 mono_crash.*

@@ -21,3 +21,4 @@ avec filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.fbx filter=lfs diff=lfs merge=lfs -text
 VRUnityProjet/Assets/TutorialInfo/Icons/URP.png !text !filter !merge !diff
+VRUnityProjet/Assets/ART/sphere.png !text !filter !merge !diff
