@@ -10,6 +10,7 @@ public class GameInput : MonoBehaviour
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
+
     }
     public Vector2 GetMovementVectorNormalized()
     {
@@ -32,6 +33,12 @@ public class GameInput : MonoBehaviour
         float jump = playerInputActions.Player.Jump.ReadValue<float>();
 
         return jump;
+    }
+    public float GetPickUpState()
+    {
+        float pickUp = playerInputActions.Player.PickUp.ReadValue<float>();
+
+        return pickUp;
     }
 
 }
