@@ -6,20 +6,27 @@ public class InteractableObject : MonoBehaviour
 {
     public bool playerInRange;
 
-    public string ItemName;
+    public string itemName;
 
     public string GetItemName()
     {
-        return ItemName;
+        return itemName;
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget)
         {
-            Debug.Log("item added to inventory");
+            if (!InventorySystem.Instance.CheckIfFull())
+            {
+                InventorySystem.Instance.AddToInventory(itemName);
 
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("inventory is full");
+            }
         }
     }
 
