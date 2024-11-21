@@ -21,6 +21,8 @@ public class InventorySystem : MonoBehaviour
 
     private GameObject whatSlotToEquip;
 
+    private Coroutine closePopupCoroutine;
+
     public bool isOpen;
 
     //public bool isFull;
@@ -100,24 +102,33 @@ public class InventorySystem : MonoBehaviour
 
     }
 
-    void TriggerPickupPopUp(string itemName,Sprite itemSprite)
-    {
-        pickupAlert.SetActive(true);
 
+    void TriggerPickupPopUp(string itemName, Sprite itemSprite)
+    {
+        // Si une coroutine est déjà en cours, on l'arrête pour réinitialiser le popup
+        if (closePopupCoroutine != null)
+        {
+            StopCoroutine(closePopupCoroutine);
+        }
+
+        // Afficher le popup avec le bon objet
+        pickupAlert.SetActive(true);
         pickupName.text = itemName;
         pickupImage.sprite = itemSprite;
 
-        // Démarre la coroutine pour fermer le popup après 3 secondes
-        StartCoroutine(ClosePickupPopUpAfterDelay(1f));
+        // Démarre la coroutine pour fermer le popup après un délai spécifié
+        closePopupCoroutine = StartCoroutine(ClosePickupPopUpAfterDelay(1f)); // Utilisez le délai souhaité
     }
+
     IEnumerator ClosePickupPopUpAfterDelay(float delay)
     {
         // Attend pendant le délai spécifié
         yield return new WaitForSeconds(delay);
 
-        // Désactive le popup
+        // Désactive le popup après le délai
         pickupAlert.SetActive(false);
     }
+
     private GameObject FindNextEmptySlot()
     {
         foreach(GameObject slot in slotList)
