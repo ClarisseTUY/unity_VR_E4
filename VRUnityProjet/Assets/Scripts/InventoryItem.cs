@@ -19,6 +19,11 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public string thisName, thisDescription, thisFunctionality;
 
+    public bool isEquippable;
+    private GameObject itemPendingEquipping;
+    public bool isNowEquipped;
+    public bool isSelected;
+
     private void Start()
     {
         itemInfoUI = InventorySystem.Instance.ItemInfoUi;
@@ -27,7 +32,17 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         itemInfoUI_itemFunctionality = itemInfoUI.transform.Find("itemFunctionality").GetComponent<Text>();
     }
 
-
+    void Update()
+    {
+        if (isSelected)
+        {
+            gameObject.GetComponent<DragDrop>().enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<DragDrop>().enabled = true;
+        }
+    }
     // Triggered when the mouse enters into the area of the item that has this script.
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -50,6 +65,11 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (eventData.button == PointerEventData.InputButton.Right)
         {
 
+        }
+        if(isEquippable && isNowEquipped == false && EquipSystem.Instance.CheckIfFull() == false)
+        {
+            EquipSystem.Instance.AddToQuickSlots(gameObject);
+            isNowEquipped = true;
         }
     }
 

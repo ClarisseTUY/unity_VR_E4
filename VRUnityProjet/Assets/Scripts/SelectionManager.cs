@@ -69,4 +69,14 @@ public class SelectionManager : MonoBehaviour
             interaction_Info_UI.SetActive(false);
         }
     }
+
+    public void DisableSelection()
+    {
+        interaction_Info_UI.SetActive(false);
+        selectedObject = null;
+    }
+    public void EnableSelection()
+    {
+        interaction_Info_UI.SetActive(true);
+    }
 }
