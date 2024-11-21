@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
  
         controller.Move(move * speed * Time.deltaTime);
-        Debug.Log("IsGrounded: " + isGrounded);
 
 
         //check if the player is on the ground so he can jump

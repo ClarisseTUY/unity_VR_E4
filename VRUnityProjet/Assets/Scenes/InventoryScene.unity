@@ -3725,11 +3725,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2040149577}
-  speed: 100
-  gravity: -150
-  jumpHeight: 5
+  speed: 90
+  gravity: -250
+  jumpHeight: 10
   groundCheck: {fileID: 1786514883}
-  groundDistance: 2
+  groundDistance: 1.5
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -3992,10 +3992,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1176653773}
+  - {fileID: 1986443116}
+  - {fileID: 2100241184}
   - {fileID: 852755524}
   - {fileID: 2040149575}
   - {fileID: 16182051}
   - {fileID: 8945133}
   - {fileID: 1458931209}
-  - {fileID: 1986443116}
-  - {fileID: 2100241184}
