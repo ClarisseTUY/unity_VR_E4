@@ -117,9 +117,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 0
   thisName: Cube
-  thisDescription: Cube text
+  thisDescription: It's a cube
   thisFunctionality: Used to test my super inventory
-  isConsumable: 0
-  healthEffect: 0
-  caloriesEffect: 0
-  hydrationEffect: 0

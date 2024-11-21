@@ -108,7 +108,7 @@ public class InventorySystem : MonoBehaviour
         pickupImage.sprite = itemSprite;
 
         // Démarre la coroutine pour fermer le popup après 3 secondes
-        StartCoroutine(ClosePickupPopUpAfterDelay(1.5f));
+        StartCoroutine(ClosePickupPopUpAfterDelay(1f));
     }
     IEnumerator ClosePickupPopUpAfterDelay(float delay)
     {
