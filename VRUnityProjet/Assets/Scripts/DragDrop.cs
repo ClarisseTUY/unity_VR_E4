@@ -114,7 +114,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         StartCoroutine(WaitForItemToFall(item, groundHeight));
 
 
-        var parentObject = GameObject.Find("Objects");
+        var parentObject = GameObject.Find("InteractableObjects");
         if (parentObject != null)
         {
             item.transform.SetParent(parentObject.transform);
