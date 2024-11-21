@@ -16,6 +16,7 @@ public class EquipSystem : MonoBehaviour
     public GameObject numbersHolder;
     public int selectedNumber = -1;
     public GameObject selectedItem;
+    public GameObject toolHolder; 
 
     private void Awake()
     {
@@ -86,7 +87,7 @@ public class EquipSystem : MonoBehaviour
                 {
                     selectedComponent.isSelected = true;
                 }
-
+                SetEquippedModel(selectedItem);
                 // Mettre à jour l'UI des numéros
                 foreach (Transform child in numbersHolder.transform)
                 {
@@ -144,6 +145,13 @@ public class EquipSystem : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void SetEquippedModel(GameObject selectedItem)
+    {
+        string selectedItemName = selectedItem.name.Replace("(Clone)", "");
+        GameObject itemModel = Instantiate(Resources.Load<GameObject>(selectedItemName + "_Model"), new Vector3(0.6f,0f,0.4f), Quaternion.Euler(0f,0f,-0f));
+        itemModel.transform.SetParent(toolHolder.transform, false);
     }
 
     GameObject GetSelectedItem(int slotNumber)
