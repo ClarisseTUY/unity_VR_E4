@@ -91,6 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerMovement: {fileID: 0}
 --- !u!225 &-3166645946878129710
 CanvasGroup:
   m_ObjectHideFlags: 0

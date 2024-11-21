@@ -48,4 +48,14 @@ public class PlayerMovement : MonoBehaviour
  
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public Vector3 GetPlayerPosition()
+    {
+        return transform.position;
+    }
+    public Vector3 GetPlayerForwardDirection()
+    {
+        return transform.forward;
+    }
+
 }
