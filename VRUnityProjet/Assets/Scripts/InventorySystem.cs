@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class InventorySystem : MonoBehaviour
     public static InventorySystem Instance { get; set; }
 
     public GameObject inventoryScreenUI;
+    public GameObject ItemInfoUi;
 
     public List<GameObject> slotList = new List<GameObject>();
 
@@ -21,6 +24,11 @@ public class InventorySystem : MonoBehaviour
     public bool isOpen;
 
     //public bool isFull;
+
+    //Pickup Popup
+    public GameObject pickupAlert;
+    public TMP_Text pickupName;
+    public Image pickupImage;
 
 
     private void Awake()
@@ -79,15 +87,37 @@ public class InventorySystem : MonoBehaviour
     public void AddToInventory(string itemName)
     {
 
-          whatSlotToEquip = FindNextEmptySlot();
+        whatSlotToEquip = FindNextEmptySlot();
 
-          itemToAdd = Instantiate(Resources.Load<GameObject>(itemName),whatSlotToEquip.transform.position, whatSlotToEquip.transform.rotation);
-          itemToAdd.transform.SetParent(whatSlotToEquip.transform);
+        itemToAdd = Instantiate(Resources.Load<GameObject>(itemName),whatSlotToEquip.transform.position, whatSlotToEquip.transform.rotation);
+        itemToAdd.transform.SetParent(whatSlotToEquip.transform);
 
-          itemList.Add(itemName);
+        itemList.Add(itemName);
+
+        TriggerPickupPopUp(itemName, itemToAdd.GetComponent<Image>().sprite);
+
+        ReCalculateList();
 
     }
 
+    void TriggerPickupPopUp(string itemName,Sprite itemSprite)
+    {
+        pickupAlert.SetActive(true);
+
+        pickupName.text = itemName;
+        pickupImage.sprite = itemSprite;
+
+        // Démarre la coroutine pour fermer le popup après 3 secondes
+        StartCoroutine(ClosePickupPopUpAfterDelay(1.5f));
+    }
+    IEnumerator ClosePickupPopUpAfterDelay(float delay)
+    {
+        // Attend pendant le délai spécifié
+        yield return new WaitForSeconds(delay);
+
+        // Désactive le popup
+        pickupAlert.SetActive(false);
+    }
     private GameObject FindNextEmptySlot()
     {
         foreach(GameObject slot in slotList)
@@ -124,4 +154,50 @@ public class InventorySystem : MonoBehaviour
             return false;
         }
     }
+
+    public void RemoveItem(string nameToRemove)
+    {
+        for(var i=slotList.Count-1; i>=0; i--)
+        {
+            if (slotList[i].transform.childCount>0)
+            {
+                if (slotList[i].transform.GetChild(0).name == nameToRemove + "Clone")
+                {
+                    Destroy(slotList[i].transform.GetChild(0).gameObject) ;
+                }
+            }
+        }
+        ReCalculateList() ;
+    }
+
+    public void ReCalculateList()
+    {
+        itemList.Clear();
+
+        foreach(GameObject slot in slotList)
+        {
+            if(slot.transform.childCount>0)
+            {
+                string name = slot.transform.GetChild(0).name;
+                string str2 = "(Clone)";
+                string result = name.Replace(str2, "");
+
+
+                itemList.Add(result);
+            }
+        }
+    }
+
+
+    /*
+    public IEnumerator calculate()
+    {
+        yield return new WaitForSeconds(1f);
+
+        InventorySystem.Instance.ReCalculateList();
+        //RefreshNeededItems();
+    }
+
+    StartCoroutine(calculate());
+    */
 }

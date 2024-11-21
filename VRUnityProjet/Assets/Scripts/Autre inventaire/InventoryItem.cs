@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class InventoryItem
+public class InventoryItem_0
 {
     public InventoryItemData data { get; private set; }
     public int stackSize { get; private set; }  
     
-    public InventoryItem(InventoryItemData source)
+    public InventoryItem_0(InventoryItemData source)
     {
         data = source;
         AddToStack();
