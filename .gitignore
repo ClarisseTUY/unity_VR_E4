@@ -29,8 +29,6 @@ VRUnityProjet/Assets/TextMesh Pro/
 *.pdb
 *.opendb
 *.VC.db
-*.pidb.meta
-*.meta
 
 # Mono auto generated files
 mono_crash.*
