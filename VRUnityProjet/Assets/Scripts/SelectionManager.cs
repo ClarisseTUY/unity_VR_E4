@@ -53,20 +53,20 @@ public class SelectionManager : MonoBehaviour
                 selectedObject = interactable.gameObject;
 
                 interaction_text.text = interactable.GetItemName();
-                interaction_Info_UI.SetActive(true);
+                EnableSelection();
             }
             else
             {
                 onTarget = false;
-                interaction_Info_UI.SetActive(false);
+                DisableSelection();
             }
 
         }
         else
         {
 
-            onTarget= false; 
-            interaction_Info_UI.SetActive(false);
+            onTarget= false;
+            DisableSelection();
         }
     }
 

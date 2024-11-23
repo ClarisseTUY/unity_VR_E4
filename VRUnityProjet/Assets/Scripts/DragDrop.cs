@@ -74,70 +74,106 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
         }
+        
     }
-
     private void DropItemIntoTheWorld(GameObject tempItemReference)
     {
+        // Nom propre de l'objet
         string cleanName = tempItemReference.name.Split(new string[] { "(Clone)" }, System.StringSplitOptions.None)[0];
 
+        // Charger et instancier l'objet
         GameObject item = Instantiate(Resources.Load<GameObject>(cleanName + "_Model"));
 
+        // Récupérer la position et direction du joueur
         Vector3 dropSpawnPosition = playerMovement.GetPlayerPosition();
         Vector3 forwardDirection = playerMovement.GetPlayerForwardDirection();
 
-        float dropDistance = 15.0f;
-        Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
+        // Récupérer le CharacterController pour calculer la hauteur du milieu
+        CharacterController playerController = playerMovement.GetComponent<CharacterController>();
+        float playerMidHeight = 0f;
 
-
-        RaycastHit hit;
-        float groundHeight = 0f;
-
-        if (Physics.Raycast(initialDropPosition, Vector3.down, out hit))
+        if (playerController != null)
         {
-            groundHeight = hit.point.y;
-        }
-
-        float heightAboveGround = 10.0f; 
-        Vector3 finalDropPosition = new Vector3(initialDropPosition.x, groundHeight + heightAboveGround, initialDropPosition.z);
-
-        item.transform.position = finalDropPosition;
-
-        Rigidbody rb = item.AddComponent<Rigidbody>();
-        rb.useGravity = true;
-
-
-        float fallSpeedMultiplier = 1200f; 
-        rb.AddForce(Vector3.down * fallSpeedMultiplier, ForceMode.Acceleration);
-
-
-
-        StartCoroutine(WaitForItemToFall(item, groundHeight));
-
-
-        var parentObject = GameObject.Find("InteractableObjects");
-        if (parentObject != null)
-        {
-            item.transform.SetParent(parentObject.transform);
+            // Calculer la hauteur au milieu du CharacterController
+            playerMidHeight = playerController.transform.position.y + playerController.center.y;
         }
         else
         {
-            Debug.LogError("Parent object 'Objects' not found!");
+            Debug.LogError("Le joueur n'a pas de CharacterController attaché !");
+            return;
         }
 
+        // Calculer la position initiale
+        float dropDistance = 2.0f; // Distance devant le joueur
+        Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
+        initialDropPosition.y = playerMidHeight; // Fixer la hauteur initiale
 
-        DestroyImmediate(tempItemReference.gameObject);
-        InventorySystem.Instance.ReCalculateList();
-    }
+        // Vérifier la hauteur du sol
+        RaycastHit hit;
+        float groundHeight = 0f;
 
-    private IEnumerator WaitForItemToFall(GameObject item, float groundHeight)
-    {
-
-        while (item.transform.position.y > groundHeight)
+        if (Physics.Raycast(initialDropPosition, Vector3.down, out hit, Mathf.Infinity))
         {
-            yield return null;
+            groundHeight = hit.point.y;
+        }
+        else
+        {
+            Debug.LogError("Impossible de détecter le sol !");
+            return;
         }
 
-        Debug.Log("L'objet a touché le sol.");
+        // Calculer la position finale (au-dessus du sol)
+        float heightAboveGround = 0.1f; // Légèrement au-dessus du sol pour éviter les interférences
+        Vector3 finalDropPosition = new Vector3(initialDropPosition.x, groundHeight + heightAboveGround, initialDropPosition.z);
+
+        // Positionner l'objet
+        item.transform.position = finalDropPosition;
+
+        // Ajouter un Rigidbody et configurer les collisions
+        Rigidbody rb = item.AddComponent<Rigidbody>();
+        rb.useGravity = true;
+        rb.isKinematic = false;
+
+        // Configurer la détection continue des collisions
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+        // Limiter la vitesse de chute pour éviter les traversées
+        rb.maxDepenetrationVelocity = 10f; // Limite de vitesse d'interaction avec le sol
+
+        // Supprimer la référence temporaire de l'objet d'origine
+        Destroy(tempItemReference); // Utilisez Destroy au lieu de DestroyImmediate si ce n'est pas dans l'éditeur
+
+        // Recalculer l'inventaire
+        InventorySystem.Instance.ReCalculateList();
+
+        // Vérifier constamment si l'objet traverse le sol
+        StartCoroutine(MonitorItemPosition(item, groundHeight));
     }
+
+    private IEnumerator MonitorItemPosition(GameObject item, float groundHeight)
+    {
+        Rigidbody rb = item.GetComponent<Rigidbody>();
+
+        while (item != null)
+        {
+            // Vérifier si l'objet est sous le sol
+            if (item.transform.position.y < groundHeight)
+            {
+                // Repositionner l'objet au-dessus du sol
+                Vector3 correctedPosition = item.transform.position;
+                correctedPosition.y = groundHeight + 0.1f; // Ajustement au-dessus du sol
+                item.transform.position = correctedPosition;
+
+                // Réinitialiser la vitesse pour éviter de continuer à traverser
+                if (rb != null)
+                {
+                    rb.velocity = Vector3.zero;
+                }
+            }
+
+            yield return null; // Attendre le prochain frame
+        }
+    }
+
 }
 

@@ -241,6 +241,94 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &1171333794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 46.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 46.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 46.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.8286972
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.35183668
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2273042
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7758543
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.47179854
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 34.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -56.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 913291006492755964, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012586933803589331, guid: 04292b7707a56484d98368596244887b,
+        type: 3}
+      propertyPath: m_Name
+      value: USB Key_Model
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04292b7707a56484d98368596244887b, type: 3}
 --- !u!1 &1351289398
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 1351289398}
   serializedVersion: 2
   m_LocalRotation: {x: 0.18203537, y: -0, z: -0, w: 0.983292}
-  m_LocalPosition: {x: -1.1, y: 1.63, z: -1.27}
+  m_LocalPosition: {x: -0.96, y: 2, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -349,7 +437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathFolder: Icons
   sceneObjects:
-  - {fileID: 1610426370}
+  - {fileID: 1351289398}
+  nameScreen: usb_key
   dataObjects:
   - {fileID: 11400000, guid: 150ff947146909448a32c7c7f56e9d10, type: 2}
 --- !u!114 &1351289403
@@ -508,3 +597,4 @@ SceneRoots:
   - {fileID: 1351289401}
   - {fileID: 860834180}
   - {fileID: 1610426374}
+  - {fileID: 1171333794}

@@ -9,6 +9,8 @@ public class TakeScreenshot : MonoBehaviour
     public string pathFolder;
 
     public List<GameObject> sceneObjects;
+    public string nameScreen;
+
     public List<InventoryItemData> dataObjects;
 
     private void Awake()
@@ -29,15 +31,15 @@ public class TakeScreenshot : MonoBehaviour
             GameObject obj = sceneObjects[i];
             InventoryItemData data = dataObjects[i];
 
-            obj.gameObject.SetActive(true);
+            //obj.gameObject.SetActive(true);
             yield return null;
 
-            TakeShot($"{Application.dataPath}/{pathFolder}/{data.id}_Icon.png");
+            TakeShot($"{Application.dataPath}/{pathFolder}/{nameScreen}_Icon.png");
 
             yield return null;
-            obj.gameObject.SetActive(false);
+            //obj.gameObject.SetActive(false);
 
-            Sprite s = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/{pathFolder}/{data.id}_Icon.png");
+            Sprite s = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/{pathFolder}/{nameScreen}_Icon.png");
             if (s != null)
             {
                 data.icon = s;

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3891040261127557432
+--- !u!1 &7736768540591519942
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,54 +8,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1029244495440128280}
-  - component: {fileID: 1336471157900858263}
-  - component: {fileID: 2404123227997679756}
-  - component: {fileID: 3085741066781397408}
-  - component: {fileID: 8184599973909596118}
-  - component: {fileID: 6466265841318444920}
-  - component: {fileID: 9059726620336303163}
+  - component: {fileID: 8362959774042032935}
+  - component: {fileID: 1532920352927860054}
+  - component: {fileID: 8981641112156307073}
+  - component: {fileID: 1425968948975827438}
+  - component: {fileID: 7861306767650842894}
+  - component: {fileID: 8071118907044009887}
+  - component: {fileID: 7796088065144158163}
   m_Layer: 5
-  m_Name: Cube
+  m_Name: Floppy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1029244495440128280
+--- !u!224 &8362959774042032935
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
-  m_LocalRotation: {x: 0, y: 0, z: 0.99998933, w: 0.004625239}
+  m_GameObject: {fileID: 7736768540591519942}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.27, y: 1.27, z: 1.27}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.47}
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -0.24}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1336471157900858263
+--- !u!222 &1532920352927860054
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
+  m_GameObject: {fileID: 7736768540591519942}
   m_CullTransparentMesh: 1
---- !u!114 &2404123227997679756
+--- !u!114 &8981641112156307073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
+  m_GameObject: {fileID: 7736768540591519942}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8fc87bc749847fc468b0bcbc2c06e265, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06b881355831f224a9e8ca8120461167, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77,46 +77,46 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 1
+  m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &3085741066781397408
+--- !u!225 &1425968948975827438
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
+  m_GameObject: {fileID: 7736768540591519942}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8184599973909596118
+--- !u!114 &7861306767650842894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
+  m_GameObject: {fileID: 7736768540591519942}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a58e8b7678dcee45a6961f769dc5190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
-  thisName: Cube
-  thisDescription: It's a cube
-  thisFunctionality: Used to test my super inventory
+  thisName: Floppy
+  thisDescription: description
+  thisFunctionality: function
   isEquippable: 0
   isNowEquipped: 0
   isSelected: 0
---- !u!114 &6466265841318444920
+--- !u!114 &8071118907044009887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
+  m_GameObject: {fileID: 7736768540591519942}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33592e83e9e3faf47976483d40e3da2e, type: 3}
@@ -124,13 +124,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   playerMovement: {fileID: 0}
---- !u!114 &9059726620336303163
+--- !u!114 &7796088065144158163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891040261127557432}
+  m_GameObject: {fileID: 7736768540591519942}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
