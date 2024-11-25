@@ -26,7 +26,7 @@ public class AnimateHandOniput : MonoBehaviour
 
 
         //fermer le poing quand on clique sur le bouton
-        //neceessite de changer la réference
+        //necessite de changer la réference
         float gripValue = gripAnimationAction.action.ReadValue<float>();
         handAnimator.SetFloat("Grip",gripValue);
     }
