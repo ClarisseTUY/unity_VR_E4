@@ -106,7 +106,7 @@ MonoBehaviour:
   isTrashable: 0
   thisName: Cube
   thisDescription: It's a cube
-  thisFunctionality: Used to test my super inventory
+  thisFunctionality: Cannot be used
   isEquippable: 0
   isNowEquipped: 0
   isSelected: 0
