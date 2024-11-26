@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: Floppy
+  itemCommand: Press "E" to take
 --- !u!65 &1458597217914964015
 BoxCollider:
   m_ObjectHideFlags: 0

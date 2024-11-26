@@ -78,23 +78,18 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
     private void DropItemIntoTheWorld(GameObject tempItemReference)
     {
-        // Nom propre de l'objet
         string cleanName = tempItemReference.name.Split(new string[] { "(Clone)" }, System.StringSplitOptions.None)[0];
 
-        // Charger et instancier l'objet
         GameObject item = Instantiate(Resources.Load<GameObject>(cleanName + "_Model"));
 
-        // Récupérer la position et direction du joueur
         Vector3 dropSpawnPosition = playerMovement.GetPlayerPosition();
         Vector3 forwardDirection = playerMovement.GetPlayerForwardDirection();
 
-        // Récupérer le CharacterController pour calculer la hauteur du milieu
         CharacterController playerController = playerMovement.GetComponent<CharacterController>();
         float playerMidHeight = 0f;
 
         if (playerController != null)
         {
-            // Calculer la hauteur au milieu du CharacterController
             playerMidHeight = playerController.transform.position.y + playerController.center.y;
         }
         else
@@ -103,12 +98,10 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             return;
         }
 
-        // Calculer la position initiale
-        float dropDistance = 2.0f; // Distance devant le joueur
+        float dropDistance = 1.5f; 
         Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
-        initialDropPosition.y = playerMidHeight; // Fixer la hauteur initiale
+        initialDropPosition.y = playerMidHeight;
 
-        // Vérifier la hauteur du sol
         RaycastHit hit;
         float groundHeight = 0f;
 
@@ -122,31 +115,23 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             return;
         }
 
-        // Calculer la position finale (au-dessus du sol)
-        float heightAboveGround = 0.1f; // Légèrement au-dessus du sol pour éviter les interférences
+        float heightAboveGround = 0.1f; 
         Vector3 finalDropPosition = new Vector3(initialDropPosition.x, groundHeight + heightAboveGround, initialDropPosition.z);
 
-        // Positionner l'objet
         item.transform.position = finalDropPosition;
 
-        // Ajouter un Rigidbody et configurer les collisions
         Rigidbody rb = item.AddComponent<Rigidbody>();
         rb.useGravity = true;
         rb.isKinematic = false;
 
-        // Configurer la détection continue des collisions
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        // Limiter la vitesse de chute pour éviter les traversées
-        rb.maxDepenetrationVelocity = 10f; // Limite de vitesse d'interaction avec le sol
+        rb.maxDepenetrationVelocity = 10f; 
 
-        // Supprimer la référence temporaire de l'objet d'origine
-        Destroy(tempItemReference); // Utilisez Destroy au lieu de DestroyImmediate si ce n'est pas dans l'éditeur
+        Destroy(tempItemReference);
 
-        // Recalculer l'inventaire
         InventorySystem.Instance.ReCalculateList();
 
-        // Vérifier constamment si l'objet traverse le sol
         StartCoroutine(MonitorItemPosition(item, groundHeight));
     }
 
@@ -156,22 +141,19 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         while (item != null)
         {
-            // Vérifier si l'objet est sous le sol
             if (item.transform.position.y < groundHeight)
             {
-                // Repositionner l'objet au-dessus du sol
                 Vector3 correctedPosition = item.transform.position;
-                correctedPosition.y = groundHeight + 0.1f; // Ajustement au-dessus du sol
+                correctedPosition.y = groundHeight + 0.1f; 
                 item.transform.position = correctedPosition;
 
-                // Réinitialiser la vitesse pour éviter de continuer à traverser
                 if (rb != null)
                 {
                     rb.velocity = Vector3.zero;
                 }
             }
 
-            yield return null; // Attendre le prochain frame
+            yield return null; 
         }
     }
 

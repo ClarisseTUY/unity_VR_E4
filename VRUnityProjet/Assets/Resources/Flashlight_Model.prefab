@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: Flashlight
+  itemCommand: Press "E" to take
 --- !u!65 &2319433086666026720
 BoxCollider:
   m_ObjectHideFlags: 0

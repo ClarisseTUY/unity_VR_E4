@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: Card Gate
+  itemCommand: Press "E" to take
 --- !u!65 &1199707377921636408
 BoxCollider:
   m_ObjectHideFlags: 0

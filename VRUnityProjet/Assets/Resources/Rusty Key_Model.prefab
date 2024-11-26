@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: Rusty Key
+  itemCommand: Press "E" to take
 --- !u!65 &8346435905241299062
 BoxCollider:
   m_ObjectHideFlags: 0

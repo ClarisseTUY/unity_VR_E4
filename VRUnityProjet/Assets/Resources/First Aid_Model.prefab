@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: First Aid
+  itemCommand: Press "E" to take
 --- !u!65 &6469650948000426059
 BoxCollider:
   m_ObjectHideFlags: 0

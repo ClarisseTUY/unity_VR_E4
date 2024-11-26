@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: USB Key
+  itemCommand: Press "E" to take
 --- !u!65 &7162098628051134966
 BoxCollider:
   m_ObjectHideFlags: 0
