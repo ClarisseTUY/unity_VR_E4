@@ -156,6 +156,10 @@ public class EquipSystem : MonoBehaviour
 
     private void SetEquippedModel(GameObject selectedItem)
     {
+        foreach (Transform child in toolHolder.transform)
+        {
+            Destroy(child.gameObject);
+        }
         string selectedItemName = selectedItem.name.Replace("(Clone)", "");
         GameObject itemModel = Instantiate(Resources.Load<GameObject>(selectedItemName + "_Model"), new Vector3(0.1f,0f,0.4f), Quaternion.Euler(100f,100f,100f));
         itemModel.transform.SetParent(toolHolder.transform, false);
