@@ -5097,9 +5097,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2139197001082291759, guid: a135dc3c7e7268b4fac764db4b338ff8,
         type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 2011356416}
+    - target: {fileID: 2139197001082291759, guid: a135dc3c7e7268b4fac764db4b338ff8,
+        type: 3}
       propertyPath: groundDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3143199889888197748, guid: a135dc3c7e7268b4fac764db4b338ff8,
+        type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 2011356416}
     - target: {fileID: 3143199889888197748, guid: a135dc3c7e7268b4fac764db4b338ff8,
         type: 3}
       propertyPath: mouseSensitivity
@@ -8501,6 +8511,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aefd9b8d8cb28f4f87b54d78bf0fca3, type: 3}
+--- !u!4 &2011356416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5229503765261336814, guid: a135dc3c7e7268b4fac764db4b338ff8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1143751163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2019905513
 GameObject:
   m_ObjectHideFlags: 0

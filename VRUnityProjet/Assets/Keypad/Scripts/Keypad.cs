@@ -53,7 +53,6 @@ namespace NavKeypad
         //Gets value from pressedbutton
         public void AddInput(string input)
         {
-            Debug.Log("Button Pressed: " + input);
             audioSource.PlayOneShot(buttonClickedSfx);
             if (displayingResult || accessWasGranted) return;
             switch (input)
