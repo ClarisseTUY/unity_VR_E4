@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  isPickable: 1
   itemName: First Aid
-  itemCommand: Press "E" to take
+  itemCommand: Press [E] to take
 --- !u!65 &6469650948000426059
 BoxCollider:
   m_ObjectHideFlags: 0

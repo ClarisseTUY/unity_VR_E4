@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     public bool playerInRange;
+    public bool isPickable;
 
     public string itemName;
     public string itemCommand;
@@ -20,7 +21,7 @@ public class InteractableObject : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget && SelectionManager.Instance.selectedObject == gameObject)
+        if(Input.GetKeyDown(KeyCode.E) && isPickable && playerInRange && SelectionManager.Instance.onTarget && SelectionManager.Instance.selectedObject == gameObject)
         {
             if (!InventorySystem.Instance.CheckIfFull())
             {

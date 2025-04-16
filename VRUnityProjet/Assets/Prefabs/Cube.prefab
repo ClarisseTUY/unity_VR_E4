@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  isPickable: 1
   itemName: Cube
-  itemCommand: Press "E" to take
+  itemCommand: Press [E] to take
 --- !u!65 &4530331590905477825
 BoxCollider:
   m_ObjectHideFlags: 0
