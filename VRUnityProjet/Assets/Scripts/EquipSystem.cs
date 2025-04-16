@@ -131,6 +131,13 @@ public class EquipSystem : MonoBehaviour
                     }
                 }
 
+                foreach (Transform child in toolHolder.transform)
+                {
+                    Destroy(child.gameObject);
+                }
+
+                selectedItem = null;
+
                 foreach (Transform child in numbersHolder.transform)
                 {
                     Transform textTransform = child.Find("Text");
