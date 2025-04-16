@@ -7,10 +7,15 @@ public class InteractableObject : MonoBehaviour
     public bool playerInRange;
 
     public string itemName;
+    public string itemCommand;
 
     public string GetItemName()
     {
         return itemName;
+    }    
+    public string GetItemCommand()
+    {
+        return itemCommand;
     }
 
     void Update()

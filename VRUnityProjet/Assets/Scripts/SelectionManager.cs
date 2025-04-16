@@ -16,13 +16,16 @@ public class SelectionManager : MonoBehaviour
 
 
 
-    public GameObject interaction_Info_UI;
-    public TMP_Text interaction_text;
+    public GameObject interaction_Info_name_UI;
+    public GameObject interaction_Info_command_UI;
+    public TMP_Text interaction_text_name;
+    public TMP_Text interaction_text_command;
 
     private void Start()
     {
         onTarget = false;
-        interaction_text = interaction_Info_UI.GetComponent<TMP_Text>();
+        interaction_text_name = interaction_Info_name_UI.GetComponent<TMP_Text>();
+        interaction_text_command = interaction_Info_command_UI.GetComponent<TMP_Text>();
     }
 
     private void Awake()
@@ -52,31 +55,34 @@ public class SelectionManager : MonoBehaviour
                 onTarget = true;    
                 selectedObject = interactable.gameObject;
 
-                interaction_text.text = interactable.GetItemName();
-                interaction_Info_UI.SetActive(true);
+                interaction_text_name.text = interactable.GetItemName();
+                interaction_text_command.text = interactable.GetItemCommand();
+                EnableSelection();
             }
             else
             {
                 onTarget = false;
-                interaction_Info_UI.SetActive(false);
+                DisableSelection();
             }
 
         }
         else
         {
 
-            onTarget= false; 
-            interaction_Info_UI.SetActive(false);
+            onTarget= false;
+            DisableSelection();
         }
     }
 
     public void DisableSelection()
     {
-        interaction_Info_UI.SetActive(false);
+        interaction_Info_name_UI.SetActive(false);
+        interaction_Info_command_UI.SetActive(false);
         selectedObject = null;
     }
     public void EnableSelection()
     {
-        interaction_Info_UI.SetActive(true);
+        interaction_Info_name_UI.SetActive(true);
+        interaction_Info_command_UI.SetActive(true);
     }
 }

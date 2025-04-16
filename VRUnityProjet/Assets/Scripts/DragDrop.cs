@@ -74,8 +74,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
         }
+        
     }
-
     private void DropItemIntoTheWorld(GameObject tempItemReference)
     {
         string cleanName = tempItemReference.name.Split(new string[] { "(Clone)" }, System.StringSplitOptions.None)[0];
@@ -85,59 +85,77 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         Vector3 dropSpawnPosition = playerMovement.GetPlayerPosition();
         Vector3 forwardDirection = playerMovement.GetPlayerForwardDirection();
 
-        float dropDistance = 15.0f;
-        Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
+        CharacterController playerController = playerMovement.GetComponent<CharacterController>();
+        float playerMidHeight = 0f;
 
+        if (playerController != null)
+        {
+            playerMidHeight = playerController.transform.position.y + playerController.center.y;
+        }
+        else
+        {
+            Debug.LogError("Le joueur n'a pas de CharacterController attaché !");
+            return;
+        }
+
+        float dropDistance = 1.5f; 
+        Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
+        initialDropPosition.y = playerMidHeight;
 
         RaycastHit hit;
         float groundHeight = 0f;
 
-        if (Physics.Raycast(initialDropPosition, Vector3.down, out hit))
+        if (Physics.Raycast(initialDropPosition, Vector3.down, out hit, Mathf.Infinity))
         {
             groundHeight = hit.point.y;
         }
+        else
+        {
+            Debug.LogError("Impossible de détecter le sol !");
+            return;
+        }
 
-        float heightAboveGround = 10.0f; 
+        float heightAboveGround = 0.1f; 
         Vector3 finalDropPosition = new Vector3(initialDropPosition.x, groundHeight + heightAboveGround, initialDropPosition.z);
 
         item.transform.position = finalDropPosition;
 
         Rigidbody rb = item.AddComponent<Rigidbody>();
         rb.useGravity = true;
+        rb.isKinematic = false;
 
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        float fallSpeedMultiplier = 1200f; 
-        rb.AddForce(Vector3.down * fallSpeedMultiplier, ForceMode.Acceleration);
+        rb.maxDepenetrationVelocity = 10f; 
 
+        Destroy(tempItemReference);
 
-
-        StartCoroutine(WaitForItemToFall(item, groundHeight));
-
-
-        var parentObject = GameObject.Find("Objects");
-        if (parentObject != null)
-        {
-            item.transform.SetParent(parentObject.transform);
-        }
-        else
-        {
-            Debug.LogError("Parent object 'Objects' not found!");
-        }
-
-
-        DestroyImmediate(tempItemReference.gameObject);
         InventorySystem.Instance.ReCalculateList();
+
+        StartCoroutine(MonitorItemPosition(item, groundHeight));
     }
 
-    private IEnumerator WaitForItemToFall(GameObject item, float groundHeight)
+    private IEnumerator MonitorItemPosition(GameObject item, float groundHeight)
     {
+        Rigidbody rb = item.GetComponent<Rigidbody>();
 
-        while (item.transform.position.y > groundHeight)
+        while (item != null)
         {
-            yield return null;
-        }
+            if (item.transform.position.y < groundHeight)
+            {
+                Vector3 correctedPosition = item.transform.position;
+                correctedPosition.y = groundHeight + 0.1f; 
+                item.transform.position = correctedPosition;
 
-        Debug.Log("L'objet a touché le sol.");
+                if (rb != null)
+                {
+                    rb.velocity = Vector3.zero;
+                }
+            }
+
+            yield return null; 
+        }
     }
+
 }
 
