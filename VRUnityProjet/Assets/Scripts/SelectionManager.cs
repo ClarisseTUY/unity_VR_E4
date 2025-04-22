@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,7 +45,8 @@ public class SelectionManager : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        int layerMask = ~(1 << LayerMask.NameToLayer("PlayerLayer"));
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             var selectionTransform = hit.transform;
 
