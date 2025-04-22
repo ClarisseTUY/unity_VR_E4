@@ -3783,7 +3783,7 @@ GameObject:
   - component: {fileID: 802947703}
   - component: {fileID: 802947702}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Door with code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8069,6 +8069,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c,
+        type: 3}
+      propertyPath: doorAnimator
+      value: 
+      objectReference: {fileID: 802947702}
     - target: {fileID: 2303921294396319335, guid: 2cf8072ebed1149479d25d30c324125c,
         type: 3}
       propertyPath: m_Name
@@ -9653,9 +9658,9 @@ Transform:
   m_LocalScale: {x: 0.41666663, y: 1, z: 0.40160644}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1938397996}
   - {fileID: 5600818161871708830}
   - {fileID: 4625125685238252645}
+  - {fileID: 1938397996}
   - {fileID: 802947701}
   - {fileID: 892194638373650327}
   - {fileID: 3480445519539119269}

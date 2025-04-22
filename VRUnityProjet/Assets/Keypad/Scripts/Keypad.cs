@@ -38,6 +38,9 @@ namespace NavKeypad
         [SerializeField] private TMP_Text keypadDisplayText;
         [SerializeField] private AudioSource audioSource;
 
+        [Header("Door Animation")]
+        [SerializeField] private Animator doorAnimator;
+
 
         private string currentInput;
         private bool displayingResult = false;
@@ -126,6 +129,8 @@ namespace NavKeypad
             onAccessGranted?.Invoke();
             panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
             audioSource.PlayOneShot(accessGrantedSfx);
+
+            doorAnimator.SetTrigger("OpenDoor");
         }
 
     }
