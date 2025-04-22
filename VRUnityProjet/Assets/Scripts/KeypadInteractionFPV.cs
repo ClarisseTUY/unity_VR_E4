@@ -13,7 +13,7 @@ namespace NavKeypad
         private void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget && SelectionManager.Instance.selectedObject == gameObject)
+            if (Input.GetMouseButtonDown(0) && playerInRange && SelectionManager.Instance.onTarget && SelectionManager.Instance.selectedObject == gameObject)
             {
                 KeypadButton keypadButton = gameObject.GetComponent<KeypadButton>();
                 if (keypadButton != null)

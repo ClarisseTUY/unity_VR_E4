@@ -412,8 +412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 4
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 4]
 --- !u!114 &144516617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,8 +644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 9
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 9]
 --- !u!114 &176720695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,8 +1690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 5
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 5]
 --- !u!114 &387724538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,8 +3292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 2
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 2]
 --- !u!65 &704481808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4514,8 +4514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 0
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 0]
 --- !u!65 &1048316097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4909,8 +4909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button Enter
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button Enter]
 --- !u!114 &1095875096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6374,8 +6374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 6
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 6]
 --- !u!114 &1501820415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6814,8 +6814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 1
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 1]
 --- !u!65 &1597016175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7676,8 +7676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 8
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 8]
 --- !u!114 &1827569171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7760,8 +7760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 3
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 3]
 --- !u!114 &1863818798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9231,8 +9231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  itemName: Button 7
-  itemCommand: Press [E]
+  itemName: Keypad
+  itemCommand: Click to press [Button 7]
 --- !u!114 &2123461454
 MonoBehaviour:
   m_ObjectHideFlags: 0
