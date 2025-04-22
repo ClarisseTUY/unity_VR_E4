@@ -21,7 +21,8 @@ public class InteractableObject : MonoBehaviour
     private TMP_Text messageText;
 
     public bool isUnlockable;              
-    public string requiredItem;           
+    public string requiredItem;
+    public string infoText;
 
     public string GetItemName()
     {
@@ -68,7 +69,7 @@ public class InteractableObject : MonoBehaviour
                 }
                 else
                 {
-                    ShowMessage("Tu as besoin de : " + requiredItem);
+                    ShowMessage(infoText);
 
                 }
             }
@@ -104,9 +105,13 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    private void ShowMessage(string message, float duration = 2f)
+    private void ShowMessage(string message, float duration = 1.5f)
     {
         if (messageText == null) return;
+        if (!messageText.gameObject.activeSelf)
+        {
+            messageText.gameObject.SetActive(true);
+        }
         messageText.text = message;
         CancelInvoke(nameof(ClearMessage));
         Invoke(nameof(ClearMessage), duration);

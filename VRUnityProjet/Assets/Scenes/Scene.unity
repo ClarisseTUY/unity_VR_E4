@@ -404,12 +404,12 @@ GameObject:
   - component: {fileID: 113683506}
   - component: {fileID: 113683505}
   m_Layer: 5
-  m_Name: Message
+  m_Name: ActionRequirement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &113683504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -417,17 +417,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113683503}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0002096459}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -1.29246955e-26, y: -0, z: 1.29246955e-26, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1959781089}
+  m_Father: {fileID: 611328354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000001878605, y: 0.00249657}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -0.000061035156, y: -141.32997}
+  m_SizeDelta: {x: 500, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113683505
 MonoBehaviour:
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: d60ed2ef2d00ac7478d769b628899877, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -476,14 +476,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -552,6 +552,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &144516617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +789,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &176720695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,6 +1840,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &387724538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3117,6 +3120,7 @@ RectTransform:
   - {fileID: 1250427162}
   - {fileID: 21382007}
   - {fileID: 1520992936}
+  - {fileID: 113683504}
   m_Father: {fileID: 291892920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3428,6 +3432,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &704481807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3448,6 +3453,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!65 &704481808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4674,6 +4680,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!65 &1048316097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5239,6 +5246,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &1095875096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5893,11 +5901,12 @@ MonoBehaviour:
   playerInRange: 0
   isPickable: 0
   itemName: Door
-  itemCommand: 
-  doorAnimator: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
+  itemCommand: Press [E] to open
+  doorAnimator: {fileID: 802947702}
+  messageText: {fileID: 113683505}
+  isUnlockable: 1
   requiredItem: 
+  infoText: The door is locked
 --- !u!65 &1211048244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6878,6 +6887,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &1501820415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6938,6 +6948,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!65 &1507804492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7369,6 +7380,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!65 &1597016175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7661,7 +7673,7 @@ GameObject:
   - component: {fileID: 1725586483}
   - component: {fileID: 1725586482}
   m_Layer: 0
-  m_Name: Door with code2
+  m_Name: Door with key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8018,7 +8030,7 @@ Transform:
   m_GameObject: {fileID: 1761578866}
   serializedVersion: 2
   m_LocalRotation: {x: -2.937551e-19, y: -0.99998844, z: 2.937551e-19, w: -0.0048089027}
-  m_LocalPosition: {x: -1.8696938, y: 0, z: -0.0012958277}
+  m_LocalPosition: {x: -1.8696938, y: 0, z: -0.001295828}
   m_LocalScale: {x: 403.49304, y: 701.3388, z: 49.32117}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8086,11 +8098,12 @@ MonoBehaviour:
   playerInRange: 0
   isPickable: 0
   itemName: Door
-  itemCommand: 
+  itemCommand: Presss [E] to open
   doorAnimator: {fileID: 1725586482}
   messageText: {fileID: 113683505}
   isUnlockable: 1
   requiredItem: Rusty Key
+  infoText: 'You need : Rust Key'
 --- !u!23 &1761578871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8516,6 +8529,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &1827569171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8582,6 +8596,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!1 &1863818791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5270135792841577758, guid: 2cf8072ebed1149479d25d30c324125c,
@@ -8608,6 +8623,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &1863818798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9294,8 +9310,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 113683504}
+  m_Children: []
   m_Father: {fileID: 1761578867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10203,6 +10218,7 @@ MonoBehaviour:
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
+  infoText: 
 --- !u!114 &2123461454
 MonoBehaviour:
   m_ObjectHideFlags: 0
