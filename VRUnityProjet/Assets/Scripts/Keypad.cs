@@ -40,6 +40,7 @@ namespace NavKeypad
 
         [Header("Door Animation")]
         [SerializeField] private Animator doorAnimator;
+        [SerializeField] InteractableObject door;
 
 
         private string currentInput;
@@ -130,7 +131,8 @@ namespace NavKeypad
             panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
             audioSource.PlayOneShot(accessGrantedSfx);
 
-            doorAnimator.SetTrigger("OpenDoor");
+            doorAnimator.SetTrigger("OpenDoor1");
+            door.UpdateShowCommand(false);
         }
 
     }

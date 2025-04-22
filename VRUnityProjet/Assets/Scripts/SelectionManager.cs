@@ -52,7 +52,7 @@ public class SelectionManager : MonoBehaviour
 
             InteractableObject interactable = selectionTransform.GetComponent<InteractableObject>();
 
-            if (interactable && interactable.playerInRange)
+            if (interactable && interactable.playerInRange && interactable.ShowCommand())
             {
                 onTarget = true;    
                 selectedObject = interactable.gameObject;

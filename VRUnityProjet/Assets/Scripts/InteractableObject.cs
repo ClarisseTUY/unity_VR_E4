@@ -9,6 +9,7 @@ public class InteractableObject : MonoBehaviour
 {
     public bool playerInRange;
     public bool isPickable;
+    public bool showCommand;
 
     public string itemName;
     public string itemCommand;
@@ -34,13 +35,23 @@ public class InteractableObject : MonoBehaviour
         return itemCommand;
     }
 
+    public bool ShowCommand()
+    {
+        return showCommand;
+    }
+
+    public void UpdateShowCommand(bool value)
+    {
+        this.showCommand = value;
+    }
     void Start()
     {
         if (messageText != null)
         {
             messageText.text = "";
         }
-    }
+        showCommand = true;
+}
 
 
     void Update()
@@ -69,7 +80,10 @@ public class InteractableObject : MonoBehaviour
                 }
                 else
                 {
-                    ShowMessage(infoText);
+                    if (showCommand)
+                    {
+                        ShowMessage(infoText);
+                    }
 
                 }
             }
@@ -80,8 +94,9 @@ public class InteractableObject : MonoBehaviour
     {
         if (doorAnimator != null)
         {
-            doorAnimator.SetTrigger("OpenDoor");
+            doorAnimator.SetTrigger("OpenDoor2");
             Debug.Log("Porte en train de s'ouvrir...");
+            UpdateShowCommand(false);
         }
         else
         {
