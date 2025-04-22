@@ -222,6 +222,16 @@ public class EquipSystem : MonoBehaviour
         return new GameObject();
     }
 
+    public string GetEquippedItemName()
+    {
+        if (selectedItem != null)
+        {
+            return selectedItem.name.Replace("(Clone)", "");
+        }
+        return null;
+    }
+
+
     public bool CheckIfFull()
     {
 
