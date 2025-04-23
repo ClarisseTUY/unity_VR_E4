@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SelectionManager : MonoBehaviour
 {
@@ -20,6 +22,12 @@ public class SelectionManager : MonoBehaviour
     public GameObject interaction_Info_command_UI;
     public TMP_Text interaction_text_name;
     public TMP_Text interaction_text_command;
+
+    //public XRController controller; // À assigner dans l'inspecteur (Main Hand Controller, ex: RightHand Controller)
+    public Transform rayOrigin;     // Le point de départ du rayon (ex: un empty object enfant du contrôleur)
+
+    public float rayDistance = 10f;
+    public LayerMask interactableLayer;
 
     private void Start()
     {
@@ -42,7 +50,7 @@ public class SelectionManager : MonoBehaviour
 
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
@@ -70,6 +78,43 @@ public class SelectionManager : MonoBehaviour
         {
 
             onTarget= false;
+            DisableSelection();
+        }*/
+
+        Ray ray;
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        // --- MODE VR (Meta Quest) ---
+        ray = new Ray(rayOrigin.position, rayOrigin.forward);
+#else
+        // --- MODE PC ---
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+#endif
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, rayDistance, interactableLayer))
+        {
+            var selectionTransform = hit.transform;
+            InteractableObject interactable = selectionTransform.GetComponent<InteractableObject>();
+
+            if (interactable && interactable.playerInRange)
+            {
+                onTarget = true;
+                selectedObject = interactable.gameObject;
+
+                interaction_text_name.text = interactable.GetItemName();
+                interaction_text_command.text = interactable.GetItemCommand();
+                EnableSelection();
+            }
+            else
+            {
+                onTarget = false;
+                DisableSelection();
+            }
+        }
+        else
+        {
+            onTarget = false;
             DisableSelection();
         }
     }
