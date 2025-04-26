@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
+
 public class InventorySystem : MonoBehaviour
 {
 
@@ -12,6 +15,8 @@ public class InventorySystem : MonoBehaviour
 
     public GameObject inventoryScreenUI;
     public GameObject ItemInfoUi;
+
+
 
     public List<GameObject> slotList = new List<GameObject>();
 
@@ -32,6 +37,43 @@ public class InventorySystem : MonoBehaviour
     public TMP_Text pickupName;
     public Image pickupImage;
 
+
+    public InputActionReference toggleInventoryAction;
+    public GameObject rightRayInteractor;
+    public GameObject leftRayInteractor;
+
+    private void OnEnable()
+    {
+        toggleInventoryAction.action.performed += ToggleInventory;
+        toggleInventoryAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        toggleInventoryAction.action.performed -= ToggleInventory;
+        toggleInventoryAction.action.Disable();
+    }
+    private void ToggleInventory(InputAction.CallbackContext context)
+    {
+        InventorySystem inventory = InventorySystem.Instance;
+
+        if (inventory == null) return;
+
+        if (!inventory.isOpen)
+        {
+            inventory.inventoryScreenUI.SetActive(true);
+            inventory.isOpen = true;
+            rightRayInteractor.SetActive(true);
+            leftRayInteractor.SetActive(true);
+        }
+        else
+        {
+            inventory.inventoryScreenUI.SetActive(false);
+            inventory.isOpen = false;
+            rightRayInteractor.SetActive(false);
+            leftRayInteractor.SetActive(false);
+        }
+    }
 
     private void Awake()
     {

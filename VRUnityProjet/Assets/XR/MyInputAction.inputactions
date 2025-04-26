@@ -1,0 +1,34 @@
+{
+    "name": "MyInputAction",
+    "maps": [
+        {
+            "name": "ToggleInventory",
+            "id": "213d3533-be9d-4610-8976-bcf4a13f2dec",
+            "actions": [
+                {
+                    "name": "ToggleInventory",
+                    "type": "Button",
+                    "id": "e1912a4d-613c-4576-893b-4a8becf62cce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62a9110f-975a-44b0-b077-c7ce3a4ce843",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
