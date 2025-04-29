@@ -1476,6 +1476,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1892770864543695113, guid: 4a80e5b488e78c64580e9896b19c865b,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 1892770864543695113, guid: 4a80e5b488e78c64580e9896b19c865b,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 3352212055393478953, guid: 4a80e5b488e78c64580e9896b19c865b,
         type: 3}
       propertyPath: m_Name
@@ -1625,6 +1637,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3352212055393478953, guid: 4a80e5b488e78c64580e9896b19c865b,
+        type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 2136570147}
     - targetCorrespondingSourceObject: {fileID: 3352212055393478953, guid: 4a80e5b488e78c64580e9896b19c865b,
         type: 3}
       insertIndex: -1
@@ -19393,6 +19409,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2136570147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129848729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cube
+  itemCommand: Press "A"
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!1001 &2139398607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19535,6 +19567,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1123925211}
     m_Modifications:
+    - target: {fileID: 191411554338269618, guid: bc5cfadf152557d4d8253891b17733f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191411554338269618, guid: bc5cfadf152557d4d8253891b17733f9,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 191411554338269618, guid: bc5cfadf152557d4d8253891b17733f9,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 339326180230235076, guid: bc5cfadf152557d4d8253891b17733f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19644,6 +19693,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9201362710627978802, guid: bc5cfadf152557d4d8253891b17733f9,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 8444368824229962640}
     - targetCorrespondingSourceObject: {fileID: 9201362710627978802, guid: bc5cfadf152557d4d8253891b17733f9,
         type: 3}
       insertIndex: -1
@@ -20068,6 +20121,23 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.010000002
       objectReference: {fileID: 0}
+    - target: {fileID: 6025667903945395756, guid: 264f0c406afcb03458f961df3b4c50db,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6025667903945395756, guid: 264f0c406afcb03458f961df3b4c50db,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 6025667903945395756, guid: 264f0c406afcb03458f961df3b4c50db,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 7347976677039953664, guid: 264f0c406afcb03458f961df3b4c50db,
         type: 3}
       propertyPath: m_Name
@@ -20082,6 +20152,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7347976677039953664, guid: 264f0c406afcb03458f961df3b4c50db,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 4111582822221666863}
     - targetCorrespondingSourceObject: {fileID: 7347976677039953664, guid: 264f0c406afcb03458f961df3b4c50db,
         type: 3}
       insertIndex: -1
@@ -20204,6 +20278,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5854672420296539669, guid: 4beed49240080804eb8a2b60f2813bea,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854672420296539669, guid: 4beed49240080804eb8a2b60f2813bea,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 5854672420296539669, guid: 4beed49240080804eb8a2b60f2813bea,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 6150029872640899773, guid: 4beed49240080804eb8a2b60f2813bea,
         type: 3}
       propertyPath: m_Enabled
@@ -20213,6 +20304,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5802088699600350193, guid: 4beed49240080804eb8a2b60f2813bea,
+        type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 8636117298160040776}
     - targetCorrespondingSourceObject: {fileID: 5802088699600350193, guid: 4beed49240080804eb8a2b60f2813bea,
         type: 3}
       insertIndex: -1
@@ -20608,6 +20703,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1123925211}
     m_Modifications:
+    - target: {fileID: 1106058204849398825, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106058204849398825, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 1106058204849398825, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 1188166439765304389, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
         type: 3}
       propertyPath: m_Layer
@@ -20715,6 +20827,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7570478239115392452, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
         type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 7360250380407017995}
+    - targetCorrespondingSourceObject: {fileID: 7570478239115392452, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 7360250380407017992}
     - targetCorrespondingSourceObject: {fileID: 7570478239115392452, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
@@ -20805,32 +20921,32 @@ PrefabInstance:
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.37293053
+      value: 0.2197094
       objectReference: {fileID: 0}
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.084913254
+      value: 0.18547344
       objectReference: {fileID: 0}
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.09961128
+      value: 0.23830223
       objectReference: {fileID: 0}
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.06864643
+      value: -0.007964134
       objectReference: {fileID: 0}
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.123067856
+      value: -0.07278776
       objectReference: {fileID: 0}
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.063614845
+      value: 0.025156975
       objectReference: {fileID: 0}
     - target: {fileID: 1199707377921636408, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
@@ -20899,9 +21015,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2348844548850174232, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
+      propertyPath: m_Size.y
+      value: 0.011883201
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348844548850174232, guid: 99833ac7b150eb8468ff70f84978ffa5,
+        type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2348844548850174232, guid: 99833ac7b150eb8468ff70f84978ffa5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.003441601
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872342183711495650, guid: 99833ac7b150eb8468ff70f84978ffa5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872342183711495650, guid: 99833ac7b150eb8468ff70f84978ffa5,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 3872342183711495650, guid: 99833ac7b150eb8468ff70f84978ffa5,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 7589534093090525928, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       propertyPath: m_Layer
@@ -20911,6 +21054,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1307260498067091823, guid: 99833ac7b150eb8468ff70f84978ffa5,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 8795991665197604836}
     - targetCorrespondingSourceObject: {fileID: 1307260498067091823, guid: 99833ac7b150eb8468ff70f84978ffa5,
         type: 3}
       insertIndex: -1
@@ -21105,6 +21252,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4111582822221666863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299396969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: USB Key
+  itemCommand: Press "A" to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!4 &5359419594342743069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1585125120784721839, guid: 059a3e5945bd88f499c9acc9821bcfc1,
@@ -21290,6 +21453,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5359419594342743080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303658830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Rusty Key
+  itemCommand: Press "A" to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!4 &7360250380407017987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3818766605008766410, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
@@ -21475,6 +21654,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7360250380407017995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471948325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: First Aid
+  itemCommand: Press "A"
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!1001 &7999284142025473608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21483,6 +21678,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1123925211}
     m_Modifications:
+    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
+        type: 3}
+      propertyPath: gripButtonAction
+      value: 
+      objectReference: {fileID: 6295368964154488032, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
+    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
+        type: 3}
+      propertyPath: addToInventoryAction
+      value: 
+      objectReference: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+        type: 3}
     - target: {fileID: 1585125120784721839, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21561,32 +21773,32 @@ PrefabInstance:
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.0732708
+      value: 0.16480732
       objectReference: {fileID: 0}
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.01240015
+      value: 0.052223206
       objectReference: {fileID: 0}
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.051753044
+      value: 0.17203236
       objectReference: {fileID: 0}
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.6760464
+      value: 0.029943943
       objectReference: {fileID: 0}
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.008964777
+      value: -0.008441448
       objectReference: {fileID: 0}
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.2670455
+      value: 0.044030666
       objectReference: {fileID: 0}
     - target: {fileID: 8346435905241299062, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
@@ -21597,6 +21809,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6052696358058346356, guid: 059a3e5945bd88f499c9acc9821bcfc1,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 5359419594342743080}
     - targetCorrespondingSourceObject: {fileID: 6052696358058346356, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       insertIndex: -1
@@ -21791,6 +22007,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8444368824229962640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294962513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Floppy
+  itemCommand: Press "A" to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!4 &8636117298160040761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5806932326408878441, guid: 4beed49240080804eb8a2b60f2813bea,
@@ -21976,6 +22208,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8636117298160040776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438499210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Flashlight
+  itemCommand: Press "A"
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!4 &8795991665197604827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1368907202327293381, guid: 99833ac7b150eb8468ff70f84978ffa5,
@@ -22161,6 +22409,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8795991665197604836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152420334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Card Gate
+  itemCommand: Press "A" to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

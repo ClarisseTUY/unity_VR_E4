@@ -28,6 +28,62 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "AddToInventory",
+            "id": "4d32282f-67bd-4fcc-b324-a8b95e05b23f",
+            "actions": [
+                {
+                    "name": "AddToInventory",
+                    "type": "Button",
+                    "id": "2faf0dd4-084c-4e0b-82c6-393857979949",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff768088-d675-4acf-8b43-4dad6c0a0fef",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddToInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Grip",
+            "id": "2e590b7e-29ed-40c3-8bd1-891f51b4464f",
+            "actions": [
+                {
+                    "name": "Grip",
+                    "type": "Button",
+                    "id": "cdd30d07-e2d5-4724-86bb-6e5c9526c51f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "541f2bbb-7685-4244-94d1-863f090dd20f",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
