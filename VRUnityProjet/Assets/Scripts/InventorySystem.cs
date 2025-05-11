@@ -12,10 +12,11 @@ public class InventorySystem : MonoBehaviour
 {
 
     public static InventorySystem Instance { get; set; }
-
+    public GameObject Canvas;
     public GameObject inventoryScreenUI;
     public GameObject ItemInfoUi;
 
+    public float ImageSize = 100;
 
 
     public List<GameObject> slotList = new List<GameObject>();
@@ -61,6 +62,7 @@ public class InventorySystem : MonoBehaviour
 
         if (!inventory.isOpen)
         {
+            inventory.Canvas.SetActive(true);
             inventory.inventoryScreenUI.SetActive(true);
             inventory.isOpen = true;
             rightRayInteractor.SetActive(true);
@@ -68,6 +70,7 @@ public class InventorySystem : MonoBehaviour
         }
         else
         {
+            inventory.Canvas.SetActive(false);
             inventory.inventoryScreenUI.SetActive(false);
             inventory.isOpen = false;
             rightRayInteractor.SetActive(false);
@@ -116,6 +119,7 @@ public class InventorySystem : MonoBehaviour
         {
 
             Debug.Log("i is pressed");
+            Canvas.SetActive(true);
             inventoryScreenUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -126,6 +130,7 @@ public class InventorySystem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.I) && isOpen)
         {
+            Canvas.SetActive(false);
             inventoryScreenUI.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -142,6 +147,15 @@ public class InventorySystem : MonoBehaviour
 
         itemToAdd = Instantiate(Resources.Load<GameObject>(itemName),whatSlotToEquip.transform.position, whatSlotToEquip.transform.rotation);
         itemToAdd.transform.SetParent(whatSlotToEquip.transform);
+
+        RectTransform rt = itemToAdd.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            rt.sizeDelta = new Vector2(ImageSize, ImageSize); // Par exemple
+            rt.localScale = Vector3.one; // Reset l’échelle, au cas où
+        }
+
+
 
         itemList.Add(itemName);
 
