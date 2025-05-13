@@ -16,6 +16,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Door Animation")]
     [SerializeField] private Animator doorAnimator;
+    [SerializeField] private string doorAnimatorName;
 
     [Header("UI")]
     [SerializeField]
@@ -94,7 +95,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (doorAnimator != null)
         {
-            doorAnimator.SetTrigger("OpenDoor2");
+            doorAnimator.SetTrigger(doorAnimatorName);
             Debug.Log("Porte en train de s'ouvrir...");
             UpdateShowCommand(false);
         }
