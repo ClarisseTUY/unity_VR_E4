@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -39,9 +40,7 @@ namespace NavKeypad
         [SerializeField] private AudioSource audioSource;
 
         [Header("Door Animation")]
-        [SerializeField] private Animator doorAnimator;
-        [SerializeField] InteractableObject door;
-        [SerializeField] string doorAnimationName;
+        [SerializeField] private DoorManager doorManager;
 
 
         private string currentInput;
@@ -131,9 +130,7 @@ namespace NavKeypad
             onAccessGranted?.Invoke();
             panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
             audioSource.PlayOneShot(accessGrantedSfx);
-
-            doorAnimator.SetTrigger(doorAnimationName);
-            door.UpdateShowCommand(false);
+            doorManager.OpenDoor();
         }
 
     }
