@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -161,8 +162,11 @@ public class EquipSystem : MonoBehaviour
             Destroy(child.gameObject);
         }
         string selectedItemName = selectedItem.name.Replace("(Clone)", "");
+        //string selectedItemName = selectedItem.name.Replace("(Clone) (UnityEngine.GameObject)", "");
         GameObject itemModel = Instantiate(Resources.Load<GameObject>(selectedItemName + "_Model"), new Vector3(0.1f,0f,0.4f), Quaternion.Euler(100f,100f,100f));
         itemModel.transform.SetParent(toolHolder.transform, false);
+
+        Debug.Log($"on hand {selectedItemName + "_Model"}");
     }
 
     GameObject GetSelectedItem(int slotNumber)
@@ -253,6 +257,19 @@ public class EquipSystem : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public bool CheckIfEmpty()
+    {
+        foreach (GameObject slot in quickSlotsList)
+        {
+            if (slot.transform.childCount > 0)
+            {
+                return false;
+            }
+
+        }
+        return true;
     }
 }
 

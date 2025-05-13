@@ -25,8 +25,6 @@ public class InventorySystem : MonoBehaviour
 
     public bool isOpen;
 
-    public bool isEmpty;
-
     //public bool isFull;
 
     //Pickup Popup

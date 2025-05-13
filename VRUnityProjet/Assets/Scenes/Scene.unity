@@ -1461,14 +1461,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 3]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &119785094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2235,14 +2232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 4]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &185050049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2413,14 +2407,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &190894799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2435,14 +2426,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 2]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!65 &190894800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2981,7 +2969,6 @@ MonoBehaviour:
   slotList: []
   itemList: []
   isOpen: 0
-  isEmpty: 0
   pickupAlert: {fileID: 954605137}
   pickupName: {fileID: 620985444}
   pickupImage: {fileID: 406251716}
@@ -3220,14 +3207,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 5]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &242769738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4262,14 +4246,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Press [E]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1001 &331366810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4370,7 +4351,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 7.97, y: -1.59, z: 9.389}
-  m_LocalScale: {x: 531.14966, y: 250.94402, z: 33.10325}
+  m_LocalScale: {x: 504.6, y: 250.94402, z: 33.10325}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 849708956}
@@ -4462,7 +4443,7 @@ GameObject:
   - component: {fileID: 339631596}
   - component: {fileID: 339631601}
   m_Layer: 0
-  m_Name: isoling_room_door
+  m_Name: Door3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4543,14 +4524,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 1
   showCommand: 0
   itemName: Door
   itemCommand: Presss [E] to open
   doorManager: {fileID: 339631601}
-  messageText: {fileID: 693330045}
-  isUnlockable: 1
-  requiredItem: Rusty Key
-  infoText: 'You need : Rust Key'
 --- !u!23 &339631599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4615,6 +4593,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 655610996}
   doorAnimatorName: OpenDoor3
+  door: {fileID: 339631598}
+  requiredItem: {fileID: 1948145105}
+  itemRequired: 1
+  needEmptyInventory: 0
+  inventorySystem: {fileID: 0}
+  equipSystem: {fileID: 0}
+  messageText: {fileID: 693330045}
+  infoText: 'You need : Rusty Key'
 --- !u!1 &340482483
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,7 +4879,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca31adf98f8108a4b90ec0850589ffc6,
         type: 3}
       insertIndex: 8
-      addedObject: {fileID: 1115730842}
+      addedObject: {fileID: 1730953955}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca31adf98f8108a4b90ec0850589ffc6,
         type: 3}
       insertIndex: 9
@@ -5302,14 +5288,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 8]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &372566098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9744,14 +9727,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 9]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &513756975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9786,37 +9766,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15233503, y: 0.1333071, z: 0.185933}
   m_Center: {x: 0.00000011950132, y: 0.00000006018672, z: 0.00006706837}
---- !u!1 &515909385
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 515909386}
-  m_Layer: 0
-  m_Name: interractive_object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &515909386
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515909385}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.108038, y: 7.6676044, z: -4.113866}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519891109
 GameObject:
   m_ObjectHideFlags: 0
@@ -10255,14 +10204,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 1
+  isUnlockable: 0
   showCommand: 0
   itemName: IndiceMorce1
   itemCommand: Press [E] to take
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1001 &553108073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13588,14 +13534,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button Enter]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &747047732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15346,6 +15289,11 @@ PrefabInstance:
       objectReference: {fileID: 862908694}
     - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c,
         type: 3}
+      propertyPath: doorManager
+      value: 
+      objectReference: {fileID: 862908697}
+    - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c,
+        type: 3}
       propertyPath: keypadCombo
       value: 2509
       objectReference: {fileID: 0}
@@ -16092,8 +16040,9 @@ GameObject:
   - component: {fileID: 862908694}
   - component: {fileID: 862908693}
   - component: {fileID: 862908692}
+  - component: {fileID: 862908697}
   m_Layer: 0
-  m_Name: isoling_room_door
+  m_Name: Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16174,14 +16123,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  showCommand: 1
+  isUnlockable: 1
+  showCommand: 0
   itemName: Door
   itemCommand: Press [E] to open
-  doorManager: {fileID: 0}
-  messageText: {fileID: 693330045}
-  isUnlockable: 1
-  requiredItem: 
-  infoText: The door is locked
+  doorManager: {fileID: 862908697}
 --- !u!23 &862908695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16232,6 +16178,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862908690}
   m_Mesh: {fileID: 7960662058633058330, guid: ca31adf98f8108a4b90ec0850589ffc6, type: 3}
+--- !u!114 &862908697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862908690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1c1b202859850428d5ba90ed72f4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 1714132570}
+  doorAnimatorName: OpenDoor1
+  door: {fileID: 862908694}
+  requiredItem: {fileID: 0}
+  itemRequired: 0
+  needEmptyInventory: 0
+  inventorySystem: {fileID: 0}
+  equipSystem: {fileID: 0}
+  messageText: {fileID: 693330045}
+  infoText: The door is locked
 --- !u!1 &870626583
 GameObject:
   m_ObjectHideFlags: 0
@@ -18264,14 +18232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 9]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &982251619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18326,14 +18291,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 5]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &985682492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19514,7 +19476,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cac18234165878c448445cbf6e3ea13a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7042103
+      value: -6.706
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cac18234165878c448445cbf6e3ea13a,
         type: 3}
@@ -20074,8 +20036,11 @@ GameObject:
   - component: {fileID: 1115730844}
   - component: {fileID: 1115730843}
   - component: {fileID: 1115730845}
+  - component: {fileID: 1115730846}
+  - component: {fileID: 1115730848}
+  - component: {fileID: 1115730849}
   m_Layer: 0
-  m_Name: isoling_room_door (1)
+  m_Name: Door4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20089,16 +20054,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115730841}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.955, y: -2.059, z: 12.299}
-  m_LocalScale: {x: 91.307884, y: 158.7085, z: 11.161065}
+  m_LocalRotation: {x: -0.0056981617, y: 0.7024359, z: 0.004683007, w: 0.7117088}
+  m_LocalPosition: {x: 0.04, y: -0.29, z: 2.132}
+  m_LocalScale: {x: -408.3, y: -730.72, z: -48.54069}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1155260894}
   - {fileID: 374828174}
   - {fileID: 1183894867}
   - {fileID: 484661193}
-  m_Father: {fileID: 849708956}
+  m_Father: {fileID: 1730953955}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &1115730843
 MeshRenderer:
@@ -20171,6 +20136,68 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010000028, y: 0.010000001, z: 0.0100003835}
   m_Center: {x: 0.000000002561137, y: -0.000000004656613, z: -0.00000025029297}
+--- !u!65 &1115730846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115730841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.04, y: 0.02, z: 0.19}
+  m_Center: {x: 0.000000002561137, y: -0.000000004656613, z: -0.09}
+--- !u!114 &1115730848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115730841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1c1b202859850428d5ba90ed72f4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 1730953956}
+  doorAnimatorName: OpenDoor3
+  door: {fileID: 1115730849}
+  requiredItem: {fileID: 0}
+  itemRequired: 0
+  needEmptyInventory: 1
+  inventorySystem: {fileID: 222666318}
+  equipSystem: {fileID: 597921385}
+  messageText: {fileID: 693330045}
+  infoText: You don't meet the requirements to open the door
+--- !u!114 &1115730849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115730841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  isPickable: 0
+  isUnlockable: 1
+  showCommand: 0
+  itemName: Door
+  itemCommand: Presss [E] to open
+  doorManager: {fileID: 1115730848}
 --- !u!1 &1116485167
 GameObject:
   m_ObjectHideFlags: 0
@@ -20716,14 +20743,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 0]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1001 &1143802935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20993,14 +21017,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button Enter]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1155055250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21934,14 +21955,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 1]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!65 &1194210947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22735,14 +22753,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 7]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1242088468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23927,14 +23942,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1294729992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23949,14 +23961,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 2]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!65 &1294729993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24841,6 +24850,11 @@ PrefabInstance:
       objectReference: {fileID: 1885130830}
     - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c,
         type: 3}
+      propertyPath: doorManager
+      value: 
+      objectReference: {fileID: 1885130833}
+    - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c,
+        type: 3}
       propertyPath: keypadCombo
       value: 1286
       objectReference: {fileID: 0}
@@ -25435,14 +25449,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 8]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1339333532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25580,14 +25591,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 3]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1340391890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28051,14 +28059,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Press [E]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1001 &1536311675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28364,14 +28369,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 1
+  isUnlockable: 0
   showCommand: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1 &1550261863
 GameObject:
   m_ObjectHideFlags: 0
@@ -29030,14 +29032,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 6]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1589809381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30870,14 +30869,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 4]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1696269637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31043,7 +31039,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 7.97, y: -0.75, z: 11.82}
-  m_LocalScale: {x: 208.25316, y: 104.01619, z: 33.10325}
+  m_LocalScale: {x: 208.25316, y: 77.79, z: 33.10325}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 849708956}
@@ -31465,14 +31461,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 1
+  isUnlockable: 0
   showCommand: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1 &1720392182
 GameObject:
   m_ObjectHideFlags: 0
@@ -31718,6 +31711,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730689400}
   m_Mesh: {fileID: 8321685774571456786, guid: ca31adf98f8108a4b90ec0850589ffc6, type: 3}
+--- !u!1 &1730953954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730953955}
+  - component: {fileID: 1730953959}
+  - component: {fileID: 1730953958}
+  - component: {fileID: 1730953957}
+  - component: {fileID: 1730953956}
+  m_Layer: 0
+  m_Name: Door Empty Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730953955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730953954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00071782345, y: 0.0065568825, z: -0.007340595, w: 0.99995136}
+  m_LocalPosition: {x: 7.97, y: -2.074, z: 12.692}
+  m_LocalScale: {x: -0.22993216, y: -0.2300292, z: -0.22999772}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1115730842}
+  m_Father: {fileID: 849708956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1730953956
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730953954}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4918f5a5820484e49863a1812a13f1cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1730953957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730953954}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1730953958
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730953954}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1730953959
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730953954}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1738923647
 GameObject:
   m_ObjectHideFlags: 0
@@ -32316,14 +32437,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 7]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1786250678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32783,14 +32901,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 6]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!114 &1800790712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32866,14 +32981,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: 
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1001 &1819412338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34449,8 +34561,9 @@ GameObject:
   - component: {fileID: 1885130830}
   - component: {fileID: 1885130829}
   - component: {fileID: 1885130828}
+  - component: {fileID: 1885130833}
   m_Layer: 0
-  m_Name: isoling_room_door
+  m_Name: Door2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34531,14 +34644,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
-  showCommand: 1
+  isUnlockable: 1
+  showCommand: 0
   itemName: Door
   itemCommand: Press [E] to open
-  doorManager: {fileID: 0}
-  messageText: {fileID: 693330045}
-  isUnlockable: 1
-  requiredItem: 
-  infoText: The door is locked
+  doorManager: {fileID: 1885130833}
 --- !u!23 &1885130831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34589,6 +34699,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885130826}
   m_Mesh: {fileID: 7960662058633058330, guid: ca31adf98f8108a4b90ec0850589ffc6, type: 3}
+--- !u!114 &1885130833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885130826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1c1b202859850428d5ba90ed72f4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 1558406829}
+  doorAnimatorName: OpenDoor2
+  door: {fileID: 1885130830}
+  requiredItem: {fileID: 0}
+  itemRequired: 0
+  needEmptyInventory: 0
+  inventorySystem: {fileID: 0}
+  equipSystem: {fileID: 0}
+  messageText: {fileID: 693330045}
+  infoText: The door is locked
 --- !u!1 &1889878241
 GameObject:
   m_ObjectHideFlags: 0
@@ -35365,6 +35497,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e2513b7eb2a5a4e9e6e57f72a30362, type: 3}
+--- !u!114 &1948145105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1686938731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1963090473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c64129faa319eb45afcd27a91eb7956,
@@ -35608,14 +35752,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 1]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!65 &1975894278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37577,14 +37718,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 0]
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!1 &2059514706
 GameObject:
   m_ObjectHideFlags: 0
@@ -39168,14 +39306,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 0
+  isUnlockable: 0
   showCommand: 0
   itemName: Keypad
   itemCommand: 
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!4 &2131628875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 454098, guid: fbef12b796f48df43a7823a7858346e8,
@@ -58468,14 +58603,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   isPickable: 1
+  isUnlockable: 0
   showCommand: 0
   itemName: Clipboard
   itemCommand: Press [E] to take
   doorManager: {fileID: 0}
-  messageText: {fileID: 0}
-  isUnlockable: 0
-  requiredItem: 
-  infoText: 
 --- !u!4 &8846063741949187094
 Transform:
   m_ObjectHideFlags: 0
@@ -59560,5 +59692,4 @@ SceneRoots:
   - {fileID: 14779865}
   - {fileID: 179341558}
   - {fileID: 629627549}
-  - {fileID: 515909386}
   - {fileID: 189799745}

@@ -99,8 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  isPickable: 1
+  isUnlockable: 0
+  showCommand: 0
   itemName: Card Gate
   itemCommand: Press "E" to take
+  doorManager: {fileID: 0}
 --- !u!65 &1199707377921636408
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -11,9 +11,15 @@ public class DoorManager : MonoBehaviour
     [SerializeField] private Animator doorAnimator;
     [SerializeField] private string doorAnimatorName;
     [SerializeField] private InteractableObject door;
+
+    [Header("Item Requirements")]
     [SerializeField] private InteractableObject requiredItem;
     [SerializeField] public bool itemRequired = false;
-    public bool isLocked;
+
+    [Header("Empty Inventory")]
+    public bool needEmptyInventory;
+    [SerializeField] public InventorySystem inventorySystem;
+    [SerializeField] public EquipSystem equipSystem;
 
 
     [Header("UI")]
@@ -28,7 +34,6 @@ public class DoorManager : MonoBehaviour
         {
             messageText.text = "";
         }
-        isLocked = true;
     }
 
     // Update is called once per frame
@@ -40,7 +45,6 @@ public class DoorManager : MonoBehaviour
     
     public void OpenDoor()
     {
-        isLocked = false;
         doorAnimator.SetTrigger(doorAnimatorName);
         door.UpdateShowCommand(false);
 
@@ -71,10 +75,13 @@ public class DoorManager : MonoBehaviour
 
             if (equippedItem == requiredItem.GetItemName())
             {
-                isLocked = false;
                 return true;
 
             }
+        }
+        else if(needEmptyInventory)
+        {
+            return inventorySystem.CheckIfEmpty() && equipSystem.CheckIfEmpty();
         }
         return false;
     }
