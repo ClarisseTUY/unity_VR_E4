@@ -131,9 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  isPickable: 1
   itemName: Floppy
-  itemCommand: Press [E] to take
+  itemCommand: Press "E" to take
 --- !u!65 &5664135586433442938
 BoxCollider:
   m_ObjectHideFlags: 0
