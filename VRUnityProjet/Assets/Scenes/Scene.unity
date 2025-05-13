@@ -1464,8 +1464,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 3]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -2239,8 +2238,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 4]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -2418,8 +2416,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: 
   itemCommand: 
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -2441,8 +2438,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 2]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -2985,6 +2981,7 @@ MonoBehaviour:
   slotList: []
   itemList: []
   isOpen: 0
+  isEmpty: 0
   pickupAlert: {fileID: 954605137}
   pickupName: {fileID: 620985444}
   pickupImage: {fileID: 406251716}
@@ -3226,8 +3223,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 5]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -4269,8 +4265,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Press [E]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -4465,6 +4460,7 @@ GameObject:
   - component: {fileID: 339631598}
   - component: {fileID: 339631597}
   - component: {fileID: 339631596}
+  - component: {fileID: 339631601}
   m_Layer: 0
   m_Name: isoling_room_door
   m_TagString: Untagged
@@ -4550,8 +4546,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Door
   itemCommand: Presss [E] to open
-  doorAnimator: {fileID: 655610996}
-  doorAnimatorName: OpenDoor3
+  doorManager: {fileID: 339631601}
   messageText: {fileID: 693330045}
   isUnlockable: 1
   requiredItem: Rusty Key
@@ -4606,6 +4601,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339631594}
   m_Mesh: {fileID: 7960662058633058330, guid: ca31adf98f8108a4b90ec0850589ffc6, type: 3}
+--- !u!114 &339631601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339631594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1c1b202859850428d5ba90ed72f4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnimator: {fileID: 655610996}
+  doorAnimatorName: OpenDoor3
 --- !u!1 &340482483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,8 +5305,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 8]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -9739,8 +9747,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 9]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -10251,8 +10258,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: IndiceMorce1
   itemCommand: Press [E] to take
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -13585,8 +13591,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button Enter]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -16172,8 +16177,7 @@ MonoBehaviour:
   showCommand: 1
   itemName: Door
   itemCommand: Press [E] to open
-  doorAnimator: {fileID: 1714132570}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 693330045}
   isUnlockable: 1
   requiredItem: 
@@ -18263,8 +18267,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 9]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -18326,8 +18329,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 5]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -20717,8 +20719,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 0]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -20995,8 +20996,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button Enter]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -21937,8 +21937,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 1]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -22739,8 +22738,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 7]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -23932,8 +23930,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: 
   itemCommand: 
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -23955,8 +23952,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 2]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -25442,8 +25438,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 8]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -25588,8 +25583,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 3]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -28060,8 +28054,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Press [E]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -28374,8 +28367,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: 
   itemCommand: 
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -29041,8 +29033,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 6]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -30882,8 +30873,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 4]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -31478,8 +31468,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: 
   itemCommand: 
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -32330,8 +32319,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 7]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -32798,8 +32786,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 6]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -32882,8 +32869,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: 
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -34548,8 +34534,7 @@ MonoBehaviour:
   showCommand: 1
   itemName: Door
   itemCommand: Press [E] to open
-  doorAnimator: {fileID: 1558406829}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 693330045}
   isUnlockable: 1
   requiredItem: 
@@ -35626,8 +35611,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 1]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -37596,8 +37580,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: Click to press [Button 0]
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -39188,8 +39171,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Keypad
   itemCommand: 
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 
@@ -58489,8 +58471,7 @@ MonoBehaviour:
   showCommand: 0
   itemName: Clipboard
   itemCommand: Press [E] to take
-  doorAnimator: {fileID: 0}
-  doorAnimatorName: 
+  doorManager: {fileID: 0}
   messageText: {fileID: 0}
   isUnlockable: 0
   requiredItem: 

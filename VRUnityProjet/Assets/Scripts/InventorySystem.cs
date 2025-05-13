@@ -25,6 +25,8 @@ public class InventorySystem : MonoBehaviour
 
     public bool isOpen;
 
+    public bool isEmpty;
+
     //public bool isFull;
 
     //Pickup Popup
@@ -170,6 +172,19 @@ public class InventorySystem : MonoBehaviour
         {
             return false;
         }
+    }
+    
+    public bool CheckIfEmpty()
+    {
+        foreach(GameObject slot in slotList)
+        {
+            if(slot.transform.childCount > 0)
+            {
+                return false;
+            }
+
+        }
+        return true;
     }
 
     public void RemoveItem(string nameToRemove)
