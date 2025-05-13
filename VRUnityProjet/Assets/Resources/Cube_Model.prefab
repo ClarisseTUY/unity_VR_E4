@@ -120,8 +120,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  handInRange: 0
   itemName: Cube
   itemCommand: Press "E" to take
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &4530331590905477825
 BoxCollider:
   m_ObjectHideFlags: 0

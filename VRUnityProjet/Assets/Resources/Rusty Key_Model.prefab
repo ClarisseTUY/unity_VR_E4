@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1585125120784721839}
   - component: {fileID: 884597965206989362}
+  - component: {fileID: 1782981062412014864}
   - component: {fileID: 8346435905241299062}
   - component: {fileID: 3553137391006943232}
   - component: {fileID: 7916533230971785794}
-  m_Layer: 0
+  - component: {fileID: -245827454421738493}
+  m_Layer: 3
   m_Name: Rusty Key_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6052696358058346356}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -498.36023, y: 17.05, z: -506.67548}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
@@ -43,36 +45,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6052696358058346356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  handInRange: 0
   itemName: Rusty Key
   itemCommand: Press "E" to take
---- !u!65 &8346435905241299062
-BoxCollider:
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
+--- !u!114 &1782981062412014864
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6052696358058346356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.67, y: 1.76, z: 1.4}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &3553137391006943232
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Rusty Key
+  itemCommand: Press "A" to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
+--- !u!65 &8346435905241299062
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,6 +90,27 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16480732, y: 0.052223206, z: 0.17203236}
+  m_Center: {x: 0.029943943, y: -0.008441448, z: 0.044030666}
+--- !u!65 &3553137391006943232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052696358058346356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.07, y: 0.012, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0.04}
@@ -110,10 +131,25 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.065, y: 0.015, z: 0.09}
   m_Center: {x: 0.075, y: -0.018, z: 0.025}
+--- !u!114 &-245827454421738493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052696358058346356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemCommand: 
+  addToInventoryAction: {fileID: 0}
 --- !u!1 &7430721926114762323
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +161,7 @@ GameObject:
   - component: {fileID: 6554819493793585287}
   - component: {fileID: 6345418556189117850}
   - component: {fileID: 5902369408341154926}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SmallKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}

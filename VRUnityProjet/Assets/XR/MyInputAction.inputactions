@@ -58,7 +58,7 @@
             ]
         },
         {
-            "name": "Grip",
+            "name": "GripRight",
             "id": "2e590b7e-29ed-40c3-8bd1-891f51b4464f",
             "actions": [
                 {
@@ -80,6 +80,62 @@
                     "processors": "",
                     "groups": "",
                     "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "GripLeft",
+            "id": "ccde9e19-c083-4632-b4c7-e2fc0af74bb6",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "031c1670-3aba-4b23-bf3c-756923f5f341",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be083835-9d40-477f-af64-1673c0c56073",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "InventoryToWorld",
+            "id": "f402b443-d17f-441f-a5bb-b0cf5dfc50e5",
+            "actions": [
+                {
+                    "name": "InventoryToWorld",
+                    "type": "Button",
+                    "id": "d8a13c34-938a-48d2-912a-da26cb48d401",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "08744767-ba3a-41fb-924d-6a132b64513a",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InventoryToWorld",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 712629776544901987}
   - component: {fileID: 1458597217914964015}
   - component: {fileID: 247078291246409560}
+  - component: {fileID: -3148809054518398724}
   m_Layer: 0
   m_Name: Floppy_Model
   m_TagString: Untagged
@@ -42,36 +43,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8576212355925340439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  handInRange: 0
   itemName: Floppy
   itemCommand: Press "E" to take
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &1458597217914964015
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8576212355925340439}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.85, y: 1.25, z: 2.07}
-  m_Center: {x: 0, y: 0.2, z: 0}
---- !u!65 &247078291246409560
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,8 +72,44 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
+  m_Size: {x: 0.14335442, y: 0.03285408, z: 0.15152836}
+  m_Center: {x: -0.0037240982, y: -0.0012049675, z: 0.0014071465}
+--- !u!65 &247078291246409560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576212355925340439}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
   m_Size: {x: 0.15, y: 0.05, z: 0.14}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3148809054518398724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576212355925340439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemCommand: 
+  addToInventoryAction: {fileID: 0}
 --- !u!1001 &5059152700581038490
 PrefabInstance:
   m_ObjectHideFlags: 0

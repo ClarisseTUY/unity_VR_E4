@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.EventSystems;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class InventorySystem : MonoBehaviour
     public GameObject inventoryScreenUI;
     public GameObject ItemInfoUi;
 
-    public float ImageSize = 100;
+
+
 
 
     public List<GameObject> slotList = new List<GameObject>();
@@ -37,6 +39,8 @@ public class InventorySystem : MonoBehaviour
     public GameObject pickupAlert;
     public TMP_Text pickupName;
     public Image pickupImage;
+
+
 
 
     public InputActionReference toggleInventoryAction;
@@ -138,6 +142,8 @@ public class InventorySystem : MonoBehaviour
             SelectionManager.Instance.GetComponent<SelectionManager>().enabled = true;
             isOpen = false;
         }
+
+
     }
 
     public void AddToInventory(string itemName)
@@ -151,7 +157,7 @@ public class InventorySystem : MonoBehaviour
         RectTransform rt = itemToAdd.GetComponent<RectTransform>();
         if (rt != null)
         {
-            rt.sizeDelta = new Vector2(ImageSize, ImageSize); // Par exemple
+            
             rt.localScale = Vector3.one; // Reset l’échelle, au cas où
         }
 
@@ -261,6 +267,8 @@ public class InventorySystem : MonoBehaviour
             }
         }
     }
+
+
 
 
     /*
