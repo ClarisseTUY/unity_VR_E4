@@ -110,6 +110,8 @@ MonoBehaviour:
   isEquippable: 0
   isNowEquipped: 0
   isSelected: 0
+  worldPrefab: {fileID: 9201362710627978802, guid: bc5cfadf152557d4d8253891b17733f9,
+    type: 3}
 --- !u!114 &8071118907044009887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  playerMovement: {fileID: 0}
+  dropItemAction: {fileID: 6625841651595738367, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!114 &7796088065144158163
 MonoBehaviour:
   m_ObjectHideFlags: 0

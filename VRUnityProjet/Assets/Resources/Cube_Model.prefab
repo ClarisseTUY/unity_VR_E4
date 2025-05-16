@@ -123,6 +123,8 @@ MonoBehaviour:
   isPickable: 1
   itemName: Cube
   itemCommand: Press [E] to take
+  handInRange: 0
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &4530331590905477825
 BoxCollider:
   m_ObjectHideFlags: 0

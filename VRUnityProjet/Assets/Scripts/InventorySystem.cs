@@ -5,13 +5,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.EventSystems;
+
 public class InventorySystem : MonoBehaviour
 {
 
     public static InventorySystem Instance { get; set; }
-
+    public GameObject Canvas;
     public GameObject inventoryScreenUI;
     public GameObject ItemInfoUi;
+
+
+
+
 
     public List<GameObject> slotList = new List<GameObject>();
 
@@ -32,6 +40,47 @@ public class InventorySystem : MonoBehaviour
     public TMP_Text pickupName;
     public Image pickupImage;
 
+
+
+
+    public InputActionReference toggleInventoryAction;
+    public GameObject rightRayInteractor;
+    public GameObject leftRayInteractor;
+
+    private void OnEnable()
+    {
+        toggleInventoryAction.action.performed += ToggleInventory;
+        toggleInventoryAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        toggleInventoryAction.action.performed -= ToggleInventory;
+        toggleInventoryAction.action.Disable();
+    }
+    private void ToggleInventory(InputAction.CallbackContext context)
+    {
+        InventorySystem inventory = InventorySystem.Instance;
+
+        if (inventory == null) return;
+
+        if (!inventory.isOpen)
+        {
+            inventory.Canvas.SetActive(true);
+            inventory.inventoryScreenUI.SetActive(true);
+            inventory.isOpen = true;
+            rightRayInteractor.SetActive(true);
+            leftRayInteractor.SetActive(true);
+        }
+        else
+        {
+            inventory.Canvas.SetActive(false);
+            inventory.inventoryScreenUI.SetActive(false);
+            inventory.isOpen = false;
+            rightRayInteractor.SetActive(false);
+            leftRayInteractor.SetActive(false);
+        }
+    }
 
     private void Awake()
     {
@@ -72,7 +121,9 @@ public class InventorySystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I) && !isOpen)
         {
+
             //Debug.Log("i is pressed");
+            Canvas.SetActive(true);
             inventoryScreenUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -83,6 +134,7 @@ public class InventorySystem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.I) && isOpen)
         {
+            Canvas.SetActive(false);
             inventoryScreenUI.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -90,6 +142,8 @@ public class InventorySystem : MonoBehaviour
             SelectionManager.Instance.GetComponent<SelectionManager>().enabled = true;
             isOpen = false;
         }
+
+
     }
 
     public void AddToInventory(string itemName)
@@ -99,6 +153,15 @@ public class InventorySystem : MonoBehaviour
 
         itemToAdd = Instantiate(Resources.Load<GameObject>(itemName),whatSlotToEquip.transform.position, whatSlotToEquip.transform.rotation);
         itemToAdd.transform.SetParent(whatSlotToEquip.transform);
+
+        RectTransform rt = itemToAdd.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            
+            rt.localScale = Vector3.one; // Reset lï¿½ï¿½chelle, au cas oï¿½
+        }
+
+
 
         itemList.Add(itemName);
 
@@ -111,7 +174,7 @@ public class InventorySystem : MonoBehaviour
 
     void TriggerPickupPopUp(string itemName, Sprite itemSprite)
     {
-        // Si une coroutine est déjà en cours, on l'arrête pour réinitialiser le popup
+        // Si une coroutine est dï¿½jï¿½ en cours, on l'arrï¿½te pour rï¿½initialiser le popup
         if (closePopupCoroutine != null)
         {
             StopCoroutine(closePopupCoroutine);
@@ -122,16 +185,16 @@ public class InventorySystem : MonoBehaviour
         pickupName.text = itemName;
         pickupImage.sprite = itemSprite;
 
-        // Démarre la coroutine pour fermer le popup après un délai spécifié
-        closePopupCoroutine = StartCoroutine(ClosePickupPopUpAfterDelay(1f)); // Utilisez le délai souhaité
+        // Dï¿½marre la coroutine pour fermer le popup aprï¿½s un dï¿½lai spï¿½cifiï¿½
+        closePopupCoroutine = StartCoroutine(ClosePickupPopUpAfterDelay(1f)); // Utilisez le dï¿½lai souhaitï¿½
     }
 
     IEnumerator ClosePickupPopUpAfterDelay(float delay)
     {
-        // Attend pendant le délai spécifié
+        // Attend pendant le dï¿½lai spï¿½cifiï¿½
         yield return new WaitForSeconds(delay);
 
-        // Désactive le popup après le délai
+        // Dï¿½sactive le popup aprï¿½s le dï¿½lai
         pickupAlert.SetActive(false);
     }
 
@@ -217,6 +280,8 @@ public class InventorySystem : MonoBehaviour
             }
         }
     }
+
+
 
 
     /*

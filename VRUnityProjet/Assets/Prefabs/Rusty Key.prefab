@@ -55,6 +55,8 @@ MonoBehaviour:
   itemName: Rusty Key
   itemCommand: Press "E" to take
   doorManager: {fileID: 0}
+  handInRange: 0
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &8346435905241299062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70,7 +72,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -93,7 +95,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.07, y: 0.012, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0.04}
@@ -114,7 +116,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.065, y: 0.015, z: 0.09}
   m_Center: {x: 0.075, y: -0.018, z: 0.025}
