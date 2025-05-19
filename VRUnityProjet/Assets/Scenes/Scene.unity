@@ -1463,9 +1463,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 3]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &119785094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2234,9 +2236,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 4]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &185050049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,8 +2384,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 223266937}
+  - {fileID: 1464361936}
   - {fileID: 597921384}
   - {fileID: 222666317}
+  - {fileID: 1962787426}
   - {fileID: 1911907620}
   - {fileID: 511293205}
   - {fileID: 1838046362}
@@ -2409,9 +2415,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &190894799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,9 +2436,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 2]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &190894800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2948,8 +2958,7 @@ Transform:
   m_LocalPosition: {x: -205.50162, y: 368.1732, z: -486.8272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1464361936}
+  m_Children: []
   m_Father: {fileID: 189799745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &222666318
@@ -2964,14 +2973,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9655a9eb1022bb64c900e70857179fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryScreenUI: {fileID: 308857968}
-  ItemInfoUi: {fileID: 1964819642}
+  Canvas: {fileID: 1962787439}
+  inventoryScreenUI: {fileID: 1962787436}
+  ItemInfoUi: {fileID: 1962787435}
   slotList: []
   itemList: []
   isOpen: 0
-  pickupAlert: {fileID: 954605137}
-  pickupName: {fileID: 620985444}
-  pickupImage: {fileID: 406251716}
+  pickupAlert: {fileID: 1962787434}
+  pickupName: {fileID: 1962787433}
+  pickupImage: {fileID: 1962787432}
+  toggleInventoryAction: {fileID: -2984430868835077631, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
+  rightRayInteractor: {fileID: 1962787428}
+  leftRayInteractor: {fileID: 1962787427}
 --- !u!1 &223266936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,10 +3032,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTarget: 0
   selectedObject: {fileID: 0}
-  interaction_Info_name_UI: {fileID: 1191672168}
-  interaction_Info_command_UI: {fileID: 1048709466}
+  interaction_Info_name_UI: {fileID: 1962787437}
+  interaction_Info_command_UI: {fileID: 1962787438}
   interaction_text_name: {fileID: 0}
   interaction_text_command: {fileID: 0}
+  rayOrigin: {fileID: 1962787429}
+  rayDistance: 10
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &225492575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3209,9 +3228,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 5]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &242769738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4248,9 +4269,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Press [E]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!1001 &331366810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4526,9 +4549,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 1
   showCommand: 0
+  handInRange: 0
   itemName: Door
   itemCommand: Presss [E] to open
   doorManager: {fileID: 339631601}
+  addToInventoryAction: {fileID: 0}
 --- !u!23 &339631599
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4847,6 +4872,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hospital_3floorv2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca31adf98f8108a4b90ec0850589ffc6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4293617104061663464, guid: ca31adf98f8108a4b90ec0850589ffc6,
         type: 3}
@@ -5290,9 +5320,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 8]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &372566098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5615,60 +5647,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838046362}
     m_Modifications:
-    - target: {fileID: 1892770864543695113, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1892770864543695113, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1892770864543695113, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
-      objectReference: {fileID: 0}
     - target: {fileID: 3352212055393478953, guid: 4a80e5b488e78c64580e9896b19c865b,
         type: 3}
       propertyPath: m_Name
       value: Cube
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530331590905477825, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530331590905477825, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 12.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530331590905477825, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530331590905477825, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5365119598426547919, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5365119598426547919, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5365119598426547919, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5365119598426547919, guid: 4a80e5b488e78c64580e9896b19c865b,
         type: 3}
@@ -5718,26 +5700,6 @@ PrefabInstance:
     - target: {fileID: 5365119598426547919, guid: 4a80e5b488e78c64580e9896b19c865b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627447227065961819, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627447227065961819, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627447227065961819, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627447227065961819, guid: 4a80e5b488e78c64580e9896b19c865b,
-        type: 3}
-      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9503,6 +9465,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1639919900450897634, guid: a135dc3c7e7268b4fac764db4b338ff8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2139197001082291759, guid: a135dc3c7e7268b4fac764db4b338ff8,
         type: 3}
       propertyPath: speed
@@ -9729,9 +9696,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 9]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &513756975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10081,7 +10050,10 @@ GameObject:
   - component: {fileID: 552711871}
   - component: {fileID: 552711870}
   - component: {fileID: 552711872}
-  m_Layer: 0
+  - component: {fileID: 552711875}
+  - component: {fileID: 552711874}
+  - component: {fileID: 552711873}
+  m_Layer: 3
   m_Name: Fichier 2@4x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10206,9 +10178,206 @@ MonoBehaviour:
   isPickable: 1
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: IndiceMorce1
   itemCommand: Press [E] to take
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
+--- !u!114 &552711873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552711867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+--- !u!54 &552711874
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552711867}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &552711875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552711867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: IndiceMorce2
+  itemCommand: Press [A] to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!1001 &553108073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10548,16 +10717,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838046362}
     m_Modifications:
-    - target: {fileID: 191411554338269618, guid: bc5cfadf152557d4d8253891b17733f9,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 191411554338269618, guid: bc5cfadf152557d4d8253891b17733f9,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
-      objectReference: {fileID: 0}
     - target: {fileID: 339326180230235076, guid: bc5cfadf152557d4d8253891b17733f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10853,10 +11012,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a16d04b16d96914faa5f930058b6421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quickSlotsPanel: {fileID: 1684413118}
+  quickSlotsPanel: {fileID: 1962787431}
   quickSlotsList: []
   itemList: []
-  numbersHolder: {fileID: 262720386}
+  numbersHolder: {fileID: 1962787430}
   selectedNumber: -1
   selectedItem: {fileID: 0}
   toolHolder: {fileID: 511293206}
@@ -13536,9 +13695,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button Enter]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &747047732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14873,16 +15034,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3872342183711495650, guid: 99833ac7b150eb8468ff70f84978ffa5,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3872342183711495650, guid: 99833ac7b150eb8468ff70f84978ffa5,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15311,6 +15462,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Keypad
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303921294396319335, guid: 2cf8072ebed1149479d25d30c324125c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5270135792841577757, guid: 2cf8072ebed1149479d25d30c324125c,
         type: 3}
@@ -16125,9 +16281,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 1
   showCommand: 0
+  handInRange: 0
   itemName: Door
   itemCommand: Press [E] to open
   doorManager: {fileID: 862908697}
+  addToInventoryAction: {fileID: 0}
 --- !u!23 &862908695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16756,16 +16914,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838046362}
     m_Modifications:
-    - target: {fileID: 1106058204849398825, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1106058204849398825, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
-      objectReference: {fileID: 0}
     - target: {fileID: 3818766605008766410, guid: 82d92cafc66a6fb4ab9cebb05753eba1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16965,16 +17113,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5854672420296539669, guid: 4beed49240080804eb8a2b60f2813bea,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5854672420296539669, guid: 4beed49240080804eb8a2b60f2813bea,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18234,9 +18372,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 9]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &982251619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18293,9 +18433,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 5]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &985682492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20195,9 +20337,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 1
   showCommand: 0
+  handInRange: 0
   itemName: Door
   itemCommand: Presss [E] to open
   doorManager: {fileID: 1115730848}
+  addToInventoryAction: {fileID: 0}
 --- !u!1 &1116485167
 GameObject:
   m_ObjectHideFlags: 0
@@ -20745,9 +20889,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 0]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!1001 &1143802935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21019,9 +21165,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button Enter]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1155055250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21957,9 +22105,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 1]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &1194210947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22755,9 +22905,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 7]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1242088468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23944,9 +24096,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1294729992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23963,9 +24117,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 2]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &1294729993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25451,9 +25607,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 8]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1339333532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25593,9 +25751,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 3]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1340391890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27271,6 +27431,7 @@ GameObject:
   - component: {fileID: 1464361936}
   - component: {fileID: 1464361938}
   - component: {fileID: 1464361937}
+  - component: {fileID: 1464361939}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -27287,11 +27448,11 @@ Transform:
   m_GameObject: {fileID: 1464361935}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -176, y: -360.85, z: 0}
+  m_LocalPosition: {x: -381.50162, y: 7.323181, z: -486.8272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 222666317}
+  m_Father: {fileID: 189799745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1464361937
 MonoBehaviour:
@@ -27300,7 +27461,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464361935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -27328,6 +27489,45 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1464361939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464361935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_ClickSpeed: 0.3
+  m_MoveDeadzone: 0.6
+  m_RepeatDelay: 0.5
+  m_RepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 1.4
+  m_TrackedScrollDeltaMultiplier: 5
+  m_ActiveInputMode: 0
+  m_MaxTrackedDeviceRaycastDistance: 1000
+  m_EnableXRInput: 1
+  m_EnableMouseInput: 1
+  m_EnableTouchInput: 1
+  m_PointAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_NavigateAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_EnableBuiltinActionsAsFallback: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
 --- !u!4 &1466684820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 490622, guid: b09e95949a2b3cf489baf6fd2307361e,
@@ -28061,9 +28261,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Press [E]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!1001 &1536311675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28246,7 +28448,10 @@ GameObject:
   - component: {fileID: 1540853471}
   - component: {fileID: 1540853470}
   - component: {fileID: 1540853472}
-  m_Layer: 0
+  - component: {fileID: 1540853475}
+  - component: {fileID: 1540853474}
+  - component: {fileID: 1540853473}
+  m_Layer: 3
   m_Name: Fichier 3@4x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28362,7 +28567,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540853467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
@@ -28371,9 +28576,205 @@ MonoBehaviour:
   isPickable: 1
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
+--- !u!114 &1540853473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540853467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+--- !u!54 &1540853474
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540853467}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1540853475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540853467}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: IndiceMorce3
+  itemCommand: 
+  addToInventoryAction: {fileID: 0}
 --- !u!1 &1550261863
 GameObject:
   m_ObjectHideFlags: 0
@@ -29034,9 +29435,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 6]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1589809381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30484,26 +30887,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838046362}
     m_Modifications:
-    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
-      objectReference: {fileID: 0}
-    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
-        type: 3}
-      propertyPath: isUnlockable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
-        type: 3}
-      propertyPath: requiredItem
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1585125120784721839, guid: 059a3e5945bd88f499c9acc9821bcfc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30871,9 +31254,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 4]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1696269637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31338,7 +31723,10 @@ GameObject:
   - component: {fileID: 1720034294}
   - component: {fileID: 1720034293}
   - component: {fileID: 1720034295}
-  m_Layer: 0
+  - component: {fileID: 1720034298}
+  - component: {fileID: 1720034297}
+  - component: {fileID: 1720034296}
+  m_Layer: 3
   m_Name: Fichier 1@4x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31454,7 +31842,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720034290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
@@ -31463,9 +31851,205 @@ MonoBehaviour:
   isPickable: 1
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: 
   itemCommand: 
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
+--- !u!114 &1720034296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720034290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+--- !u!54 &1720034297
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720034290}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1720034298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720034290}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemCommand: 
+  addToInventoryAction: {fileID: 0}
 --- !u!1 &1720392182
 GameObject:
   m_ObjectHideFlags: 0
@@ -31923,11 +32507,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838046362}
     m_Modifications:
-    - target: {fileID: 2742667828695594064, guid: 264f0c406afcb03458f961df3b4c50db,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.29
-      objectReference: {fileID: 0}
     - target: {fileID: 4651198532085549266, guid: 264f0c406afcb03458f961df3b4c50db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31977,16 +32556,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6025667903945395756, guid: 264f0c406afcb03458f961df3b4c50db,
-        type: 3}
-      propertyPath: isPickable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6025667903945395756, guid: 264f0c406afcb03458f961df3b4c50db,
-        type: 3}
-      propertyPath: itemCommand
-      value: Press [E] to take
       objectReference: {fileID: 0}
     - target: {fileID: 7347976677039953664, guid: 264f0c406afcb03458f961df3b4c50db,
         type: 3}
@@ -32439,9 +33008,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 7]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1786250678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32903,9 +33474,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 6]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!114 &1800790712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32983,9 +33556,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: 
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!1001 &1819412338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33576,7 +34151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1838046362}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: InteractableObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34646,9 +35221,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 1
   showCommand: 0
+  handInRange: 0
   itemName: Door
   itemCommand: Press [E] to open
   doorManager: {fileID: 1885130833}
+  addToInventoryAction: {fileID: 0}
 --- !u!23 &1885130831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34979,7 +35556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1911907620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35504,11 +36081,175 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1686938731}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1962787425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 189799745}
+    m_Modifications:
+    - target: {fileID: 5602241158816619262, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_Name
+      value: XR Origin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -498.80377
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -509.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6, type: 3}
+--- !u!4 &1962787426 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3067323352965846998, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7070918972406451875, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1962787429 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1524718806641093091, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8428330254153395779, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 203858918556522968, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1962787432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9042940327140848748, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1962787433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6456029055867837502, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1962787434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605911723202327377, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 167058471269865644, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 969882625134770043, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2176156342492589400, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4023164956413932794, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962787439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4857680468815659386, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962787425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963090473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c64129faa319eb45afcd27a91eb7956,
@@ -35754,9 +36495,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 1]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!65 &1975894278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37720,9 +38463,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: Click to press [Button 0]
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!1 &2059514706
 GameObject:
   m_ObjectHideFlags: 0
@@ -38662,6 +39407,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105563597}
   m_CullTransparentMesh: 1
+--- !u!1 &2113866257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113866259}
+  - component: {fileID: 2113866258}
+  m_Layer: 0
+  m_Name: XR Interaction Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2113866258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113866257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+--- !u!4 &2113866259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113866257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.352142, y: 10.481808, z: -20.162811}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2114278218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39308,9 +40099,11 @@ MonoBehaviour:
   isPickable: 0
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Keypad
   itemCommand: 
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
 --- !u!4 &2131628875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 454098, guid: fbef12b796f48df43a7823a7858346e8,
@@ -48882,21 +49675,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838046362}
     m_Modifications:
-    - target: {fileID: 3177535706756271699, guid: fea02fb2630a0044895529f05128c96d,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177535706756271699, guid: fea02fb2630a0044895529f05128c96d,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3177535706756271699, guid: fea02fb2630a0044895529f05128c96d,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 7367628153213465810, guid: fea02fb2630a0044895529f05128c96d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54469,8 +55247,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -58560,35 +59337,16 @@ GameObject:
   - component: {fileID: 4069232746984974812}
   - component: {fileID: 1256651461}
   - component: {fileID: 8838525918904373558}
-  - component: {fileID: 8838525918904373557}
-  m_Layer: 0
+  - component: {fileID: 8838525918904373561}
+  - component: {fileID: 8838525918904373560}
+  - component: {fileID: 8838525918904373559}
+  m_Layer: 3
   m_Name: clipboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &8838525918904373557
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8838525918904373556}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.35, y: 0.4, z: 1.16}
-  m_Center: {x: 0, y: -0.0000000013969838, z: 0}
 --- !u!114 &8838525918904373558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58596,7 +59354,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8838525918904373556}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
@@ -58605,9 +59363,206 @@ MonoBehaviour:
   isPickable: 1
   isUnlockable: 0
   showCommand: 0
+  handInRange: 0
   itemName: Clipboard
   itemCommand: Press [E] to take
   doorManager: {fileID: 0}
+  addToInventoryAction: {fileID: 0}
+--- !u!114 &8838525918904373559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838525918904373556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+--- !u!54 &8838525918904373560
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838525918904373556}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8838525918904373561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838525918904373556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Clipboard
+  itemCommand: Press [A] to take
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!4 &8846063741949187094
 Transform:
   m_ObjectHideFlags: 0
@@ -59693,3 +60648,4 @@ SceneRoots:
   - {fileID: 179341558}
   - {fileID: 629627549}
   - {fileID: 189799745}
+  - {fileID: 2113866259}

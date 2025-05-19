@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 4651198532085549266}
   - component: {fileID: 6025667903945395756}
   - component: {fileID: 7532028978806573640}
-  - component: {fileID: 2742667828695594064}
   - component: {fileID: 5383356439529583484}
   - component: {fileID: 7857566834395897716}
   - component: {fileID: 5403146212265075527}
@@ -134,9 +133,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  isPickable: 1
+  isUnlockable: 0
+  showCommand: 0
   handInRange: 0
   itemName: USB Key
-  itemCommand: Press "E" to take
+  itemCommand: Press [E] to take
+  doorManager: {fileID: 0}
   addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
     type: 3}
 --- !u!114 &7532028978806573640
@@ -155,27 +158,6 @@ MonoBehaviour:
   itemCommand: Press "A" to take
   addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
     type: 3}
---- !u!65 &2742667828695594064
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7347976677039953664}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.049708366, y: 0.028446674, z: 0.10881615}
-  m_Center: {x: 0.0003695488, y: -0.0022518635, z: 0.009837151}
 --- !u!65 &5383356439529583484
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -193,7 +175,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.05, y: 0, z: 0.1}
   m_Center: {x: 0, y: 0.0020000003, z: 0.010000002}

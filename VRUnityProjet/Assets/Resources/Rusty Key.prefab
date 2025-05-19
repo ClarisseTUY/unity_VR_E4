@@ -110,7 +110,7 @@ MonoBehaviour:
   isEquippable: 0
   isNowEquipped: 0
   isSelected: 0
-  worldPrefab: {fileID: 6052696358058346356, guid: f2c27806aa1a37844a58483ede068e32,
+  worldPrefab: {fileID: 6052696358058346356, guid: e52e9c0781c68a145b035ad562fccd3a,
     type: 3}
 --- !u!114 &392080473702803078
 MonoBehaviour:
