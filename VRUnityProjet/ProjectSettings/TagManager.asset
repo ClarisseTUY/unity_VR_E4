@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Slot
   - QuickSlot
+  - ciseaux
+  - scalpel
+  - tweezer
+  - probe
   layers:
   - Default
   - TransparentFX
