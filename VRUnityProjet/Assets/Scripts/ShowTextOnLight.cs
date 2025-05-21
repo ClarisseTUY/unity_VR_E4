@@ -26,7 +26,7 @@ public class ShowTextOnLight : MonoBehaviour
         float rotY = NormalizeAngle(rotation.y);
 
         // Logs pour vérifier en temps réel
-        Debug.Log($"Rotation X: {rotX}, Rotation Y: {rotY}");
+//        Debug.Log($"Rotation X: {rotX}, Rotation Y: {rotY}");
 
         if (rotX >= -5f && rotX <= -1f && rotY >= 75f && rotY <= 80f)
         {
