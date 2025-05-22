@@ -27579,7 +27579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b99a3f30b256484c8306391cd8dbd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedObjectName: Scissors_Model(Clone)
+  expectedObjectName: Probe_Model(Clone)
   objectToActivate: {fileID: 498668150}
   newMaterial: {fileID: -1580535799172915004, guid: f748ff7269dcce74caf0ab76ec8b929b,
     type: 3}
@@ -34656,7 +34656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b99a3f30b256484c8306391cd8dbd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedObjectName: Probe_Model(Clone)
+  expectedObjectName: Scissors_Model(Clone)
   objectToActivate: {fileID: 257348861}
   newMaterial: {fileID: -1580535799172915004, guid: f748ff7269dcce74caf0ab76ec8b929b,
     type: 3}
