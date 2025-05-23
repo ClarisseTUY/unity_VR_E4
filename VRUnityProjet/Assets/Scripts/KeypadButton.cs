@@ -61,5 +61,14 @@ namespace NavKeypad
 
             moving = false;
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("doigt")) // ou "Controller", "Finger", selon ton rig
+            {
+                PressButton();
+            }
+        }
+
     }
 }
