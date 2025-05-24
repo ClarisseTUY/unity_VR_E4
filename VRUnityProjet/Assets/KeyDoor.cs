@@ -41,8 +41,8 @@ public class KeyDoor : MonoBehaviour
             Debug.Log("Clé a touché la porte !");
             doorManager.OpenDoor();
             Destroy(collision.gameObject);
+            //Destroy(gameObject); //a décommenter quand on aura une serrure
 
-            // Mets ici ce que tu veux faire (ouvrir, jouer un son, etc.)
         }
     }
     /*
