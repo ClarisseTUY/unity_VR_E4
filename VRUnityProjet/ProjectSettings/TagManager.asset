@@ -7,6 +7,7 @@ TagManager:
   - Slot
   - QuickSlot
   - doigt
+  - Key
   layers:
   - Default
   - TransparentFX

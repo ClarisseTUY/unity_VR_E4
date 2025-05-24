@@ -36,14 +36,12 @@ public class VRInterectbleObject : MonoBehaviour
     private void OnGrab(SelectEnterEventArgs args)
     {
         isGrabbed = true;
-        Debug.Log($"Grabbed {gameObject.name}");
         AddInputListener();
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
         isGrabbed = false;
-        Debug.Log($"Released {gameObject.name}");
         RemoveInputListener();
     }
 
@@ -74,7 +72,6 @@ public class VRInterectbleObject : MonoBehaviour
         if (!InventorySystem.Instance.CheckIfFull())
         {
             InventorySystem.Instance.AddToInventory(itemName);
-            Debug.Log($"Added {itemName} to inventory");
             Destroy(gameObject);
         }
         else

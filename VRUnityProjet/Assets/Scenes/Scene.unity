@@ -4169,6 +4169,8 @@ GameObject:
   - component: {fileID: 339631597}
   - component: {fileID: 339631596}
   - component: {fileID: 339631601}
+  - component: {fileID: 339631602}
+  - component: {fileID: 339631603}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Untagged
@@ -4233,7 +4235,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.0200003, y: 0.015, z: 0.28}
   m_Center: {x: -0.000000034691766, y: 0.0000000027939677, z: -0.00000019068827}
@@ -4244,7 +4246,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339631594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
@@ -4323,13 +4325,58 @@ MonoBehaviour:
   doorAnimator: {fileID: 655610996}
   doorAnimatorName: OpenDoor3
   door: {fileID: 339631598}
-  requiredItem: {fileID: 1948145105}
+  requiredItem: {fileID: 0}
   itemRequired: 1
   needEmptyInventory: 0
   inventorySystem: {fileID: 0}
   equipSystem: {fileID: 0}
   messageText: {fileID: 693330045}
   infoText: 'You need : Rusty Key'
+--- !u!114 &339631602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339631594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419c2b5bcd1078647853a43a2593af6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showCommand: 0
+  itemName: 
+  itemCommand: 
+  doorManager: {fileID: 339631601}
+  OpenDoorAction: {fileID: 3573888317055291848, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
+--- !u!54 &339631603
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339631594}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &340482483
 GameObject:
   m_ObjectHideFlags: 0
@@ -10779,7 +10826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &611328354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33868,18 +33915,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e2513b7eb2a5a4e9e6e57f72a30362, type: 3}
---- !u!114 &1948145105 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 884597965206989362, guid: 059a3e5945bd88f499c9acc9821bcfc1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1686938731}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1962787425
 PrefabInstance:
   m_ObjectHideFlags: 0

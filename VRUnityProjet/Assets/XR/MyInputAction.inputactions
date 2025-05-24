@@ -140,6 +140,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "OpenDoor",
+            "id": "0edf5cf4-1c2b-4caf-aa61-6c002aa430f6",
+            "actions": [
+                {
+                    "name": "OpenDoor",
+                    "type": "Button",
+                    "id": "b084de7c-34a3-44ef-b4b9-9df06a6bda97",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "19004b2c-4f5d-4cef-b50c-7ba3b8163c7a",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenDoor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
