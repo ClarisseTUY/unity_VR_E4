@@ -168,6 +168,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "HelpMenu",
+            "id": "8342d9c7-b45d-4766-a111-3313835dca2c",
+            "actions": [
+                {
+                    "name": "HelpMenu",
+                    "type": "Button",
+                    "id": "dd78607f-ec39-4c61-a644-a891d216b588",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8c61bd65-ef5c-4cc2-8f02-a44ccbc2f669",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HelpMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
