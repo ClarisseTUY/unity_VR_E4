@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -8343666222661008217}
   - component: {fileID: -5477941853412266287}
   - component: {fileID: 5266501717982887386}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tweezer_Mode
   m_TagString: Untagged
   m_Icon: {fileID: 0}

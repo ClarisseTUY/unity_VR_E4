@@ -3,7 +3,8 @@ using UnityEngine;
 public class DropZone : MonoBehaviour
 {
     [Header("Objectif")]
-    public string expectedObjectName; 
+    public string expectedObjectName;
+    public string expectedObjectName2;
 
     [Header("Action à déclencher")]
     public GameObject objectToActivate;
@@ -14,7 +15,7 @@ public class DropZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (!other.name.Contains(expectedObjectName))
+        if ((!other.name.Contains(expectedObjectName)) && (!other.name.Contains(expectedObjectName2)) )
         {
             //Debug.Log($"[DropZone] {other.name} ignoré (attendait : {expectedObjectName})");
             return;

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5361584551886508816}
   - component: {fileID: 8534564873524767640}
   - component: {fileID: -2282904220806897387}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Probe_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3368126185036844692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
   m_Name: 
@@ -149,7 +149,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.23, y: 1.17, z: 0.62}
   m_Center: {x: -0.0074228956, y: -0.0016476429, z: 0.0031473762}
@@ -167,7 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   itemCommand: 
-  addToInventoryAction: {fileID: 0}
+  addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!54 &8534564873524767640
 Rigidbody:
   m_ObjectHideFlags: 0
