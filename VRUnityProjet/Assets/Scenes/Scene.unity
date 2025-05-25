@@ -11428,12 +11428,12 @@ PrefabInstance:
     - target: {fileID: 6042651961323552478, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
         type: 3}
       propertyPath: m_CameraYOffset
-      value: 0.95
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -487.663
+      value: -497.871
       objectReference: {fileID: 0}
     - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
         type: 3}
@@ -11443,7 +11443,7 @@ PrefabInstance:
     - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -494.27
+      value: -507.963
       objectReference: {fileID: 0}
     - target: {fileID: 6732178783712125373, guid: 3ad28fd8e4bbedd40a9bef0a97685fc6,
         type: 3}
