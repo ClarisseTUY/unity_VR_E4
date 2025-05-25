@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     // --- Is this item trashable --- //
     public bool isTrashable;
+
 
     // --- Item Info UI --- //
     private GameObject itemInfoUI;
@@ -23,6 +26,8 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private GameObject itemPendingEquipping;
     public bool isNowEquipped;
     public bool isSelected;
+
+    public GameObject worldPrefab;
 
     private void Start()
     {
@@ -50,6 +55,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         itemInfoUI_itemName.text = thisName;
         itemInfoUI_itemDescription.text = thisDescription;
         itemInfoUI_itemFunctionality.text = thisFunctionality;
+
     }
 
     // Triggered when the mouse exits the area of the item that has this script.
@@ -61,12 +67,14 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     // Triggered when the mouse is clicked over the item that has this script.
     public void OnPointerDown(PointerEventData eventData)
     {
-        //Right Mouse Button Click on
+
+
+        ////Right Mouse Button Click on
         if (eventData.button == PointerEventData.InputButton.Right)
         {
 
         }
-        if(isEquippable && isNowEquipped == false && EquipSystem.Instance.CheckIfFull() == false)
+        if (isEquippable && isNowEquipped == false && EquipSystem.Instance.CheckIfFull() == false)
         {
             EquipSystem.Instance.AddToQuickSlots(gameObject);
             isNowEquipped = true;
@@ -80,4 +88,6 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
         }
     }
+
+
 }

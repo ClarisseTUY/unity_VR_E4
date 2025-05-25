@@ -10,11 +10,13 @@ TagManager:
   - scalpel
   - tweezer
   - probe
+  - doigt
+  - Key
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interectable
   - Water
   - UI
   - Ground

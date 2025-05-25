@@ -1,0 +1,202 @@
+{
+    "name": "MyInputAction",
+    "maps": [
+        {
+            "name": "ToggleInventory",
+            "id": "213d3533-be9d-4610-8976-bcf4a13f2dec",
+            "actions": [
+                {
+                    "name": "ToggleInventory",
+                    "type": "Button",
+                    "id": "e1912a4d-613c-4576-893b-4a8becf62cce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62a9110f-975a-44b0-b077-c7ce3a4ce843",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "AddToInventory",
+            "id": "4d32282f-67bd-4fcc-b324-a8b95e05b23f",
+            "actions": [
+                {
+                    "name": "AddToInventory",
+                    "type": "Button",
+                    "id": "2faf0dd4-084c-4e0b-82c6-393857979949",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff768088-d675-4acf-8b43-4dad6c0a0fef",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddToInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "GripRight",
+            "id": "2e590b7e-29ed-40c3-8bd1-891f51b4464f",
+            "actions": [
+                {
+                    "name": "Grip",
+                    "type": "Button",
+                    "id": "cdd30d07-e2d5-4724-86bb-6e5c9526c51f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "541f2bbb-7685-4244-94d1-863f090dd20f",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "GripLeft",
+            "id": "ccde9e19-c083-4632-b4c7-e2fc0af74bb6",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "031c1670-3aba-4b23-bf3c-756923f5f341",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be083835-9d40-477f-af64-1673c0c56073",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "InventoryToWorld",
+            "id": "f402b443-d17f-441f-a5bb-b0cf5dfc50e5",
+            "actions": [
+                {
+                    "name": "InventoryToWorld",
+                    "type": "Button",
+                    "id": "d8a13c34-938a-48d2-912a-da26cb48d401",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "08744767-ba3a-41fb-924d-6a132b64513a",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InventoryToWorld",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "OpenDoor",
+            "id": "0edf5cf4-1c2b-4caf-aa61-6c002aa430f6",
+            "actions": [
+                {
+                    "name": "OpenDoor",
+                    "type": "Button",
+                    "id": "b084de7c-34a3-44ef-b4b9-9df06a6bda97",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "19004b2c-4f5d-4cef-b50c-7ba3b8163c7a",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenDoor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "HelpMenu",
+            "id": "8342d9c7-b45d-4766-a111-3313835dca2c",
+            "actions": [
+                {
+                    "name": "HelpMenu",
+                    "type": "Button",
+                    "id": "dd78607f-ec39-4c61-a644-a891d216b588",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8c61bd65-ef5c-4cc2-8f02-a44ccbc2f669",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HelpMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
