@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ObjectHover : MonoBehaviour
@@ -9,10 +10,14 @@ public class ObjectHover : MonoBehaviour
     public Light targetLight;      // Lumière à faire tourner
     private bool isHovered = false;
     private bool followRotation = false;
+    public InputActionReference MoveLight;
 
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        
+
         RaycastHit hit;
 
         bool rayHit = Physics.Raycast(ray, out hit);

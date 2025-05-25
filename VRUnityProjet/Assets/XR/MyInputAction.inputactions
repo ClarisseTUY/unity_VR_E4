@@ -196,6 +196,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "MoveLight",
+            "id": "6c58b50e-c81b-4175-a92a-448e0f6eb30f",
+            "actions": [
+                {
+                    "name": "MoveLight",
+                    "type": "Button",
+                    "id": "56fe388f-a5cc-4c26-82de-82aaefa5ef6f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e0f978a1-ce77-4816-b469-850b3b2bb081",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
