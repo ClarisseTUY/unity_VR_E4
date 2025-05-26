@@ -46,7 +46,7 @@ public class DoorManager : MonoBehaviour
     public void OpenDoor()
     {
         doorAnimator.SetTrigger(doorAnimatorName);
-        door.UpdateShowCommand(false);
+        //door.UpdateShowCommand(false);
 
     }
 

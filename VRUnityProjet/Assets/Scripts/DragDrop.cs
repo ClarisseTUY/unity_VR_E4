@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer.Internal;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Playables;
+using Unity.VisualScripting;
 
-public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     [SerializeField] private Canvas canvas;
@@ -17,15 +21,29 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     Vector3 startPosition;
     Transform startParent;
 
-    public PlayerMovement playerMovement;
+
+    public InputActionReference dropItemAction;
+
+    private bool isHovered = false;
+    //public PlayerMovement playerMovement;
 
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        //playerMovement = FindObjectOfType<PlayerMovement>();
 
+    }
+
+    private void OnEnable()
+    {
+        AddInputListener();
+    }
+
+    private void OnDisable()
+    {
+        RemoveInputListener();
     }
 
 
@@ -75,65 +93,66 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             canvasGroup.blocksRaycasts = true;
         }
         
+
     }
     private void DropItemIntoTheWorld(GameObject tempItemReference)
     {
         string cleanName = tempItemReference.name.Split(new string[] { "(Clone)" }, System.StringSplitOptions.None)[0];
 
-        GameObject item = Instantiate(Resources.Load<GameObject>(cleanName + "_Model"));
+        //GameObject item = Instantiate(Resources.Load<GameObject>(cleanName + "_Model"));
 
-        Vector3 dropSpawnPosition = playerMovement.GetPlayerPosition();
-        Vector3 forwardDirection = playerMovement.GetPlayerForwardDirection();
-
-        CharacterController playerController = playerMovement.GetComponent<CharacterController>();
-        float playerMidHeight = 0f;
-
-        if (playerController != null)
+        InventoryItem invItem = tempItemReference.GetComponent<InventoryItem>();
+        if (invItem != null && invItem.worldPrefab != null)
         {
-            playerMidHeight = playerController.transform.position.y + playerController.center.y;
+            GameObject item = Instantiate(invItem.worldPrefab);
+
+            Vector3 dropSpawnPosition = Camera.main.transform.position;
+            Vector3 forwardDirection = Camera.main.transform.forward;
+
+            float playerMidHeight = Camera.main.transform.position.y;
+
+
+            float dropDistance = 1.5f;
+            Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
+            initialDropPosition.y = playerMidHeight;
+
+            RaycastHit hit;
+            float groundHeight = 0f;
+
+            if (Physics.Raycast(initialDropPosition, Vector3.down, out hit, Mathf.Infinity))
+            {
+                groundHeight = hit.point.y;
+            }
+            else
+            {
+                Debug.LogError("Impossible de détecter le sol !");
+                return;
+            }
+
+            float heightAboveGround = 0.1f;
+            Vector3 finalDropPosition = new Vector3(initialDropPosition.x, groundHeight + heightAboveGround, initialDropPosition.z);
+
+            item.transform.position = finalDropPosition;
+
+
+
+            tempItemReference.transform.SetParent(null);
+            Destroy(tempItemReference);
+            StartCoroutine(DelayedRecalculate());
+
+
+            StartCoroutine(MonitorItemPosition(item, groundHeight));
         }
         else
         {
-            Debug.LogError("Le joueur n'a pas de CharacterController attaché !");
-            return;
+            Debug.LogError("World prefab manquant !");
         }
 
-        float dropDistance = 1.5f; 
-        Vector3 initialDropPosition = dropSpawnPosition + forwardDirection * dropDistance;
-        initialDropPosition.y = playerMidHeight;
 
-        RaycastHit hit;
-        float groundHeight = 0f;
-
-        if (Physics.Raycast(initialDropPosition, Vector3.down, out hit, Mathf.Infinity))
-        {
-            groundHeight = hit.point.y;
-        }
-        else
-        {
-            Debug.LogError("Impossible de détecter le sol !");
-            return;
-        }
-
-        float heightAboveGround = 0.1f; 
-        Vector3 finalDropPosition = new Vector3(initialDropPosition.x, groundHeight + heightAboveGround, initialDropPosition.z);
-
-        item.transform.position = finalDropPosition;
-
-        Rigidbody rb = item.AddComponent<Rigidbody>();
-        rb.useGravity = true;
-        rb.isKinematic = false;
-
-        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
-
-        rb.maxDepenetrationVelocity = 10f; 
-
-        Destroy(tempItemReference);
-
-        InventorySystem.Instance.ReCalculateList();
-
-        StartCoroutine(MonitorItemPosition(item, groundHeight));
     }
+
+
+
 
     private IEnumerator MonitorItemPosition(GameObject item, float groundHeight)
     {
@@ -157,5 +176,84 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         }
     }
 
+    private IEnumerator DelayedRecalculate()
+    {
+        yield return null; // attendre fin de frame
+        InventorySystem.Instance.ReCalculateList();
+    }
+
+    //public void OnPointerClick(PointerEventData eventData)
+    //{
+    //    // Simulation du début de drag en VR : déclenche le comportement de DragDrop
+    //    var dragDrop = GetComponent<DragDrop>();
+    //    if (dragDrop != null)
+    //    {
+    //        dragDrop.OnBeginDrag(eventData);
+    //    }
+    //}
+
+
+    //private void OnEnable()
+    //{
+    //    dropItemAction.action.performed += OnDropAction;
+    //    dropItemAction.action.Enable();
+    //}
+
+    //private void OnDisable()
+    //{
+    //    dropItemAction.action.performed -= OnDropAction;
+    //    dropItemAction.action.Disable();
+    //}
+
+    //private void OnDropAction(InputAction.CallbackContext ctx)
+    //{
+    //    if (itemBeingDragged != null)
+    //    {
+    //        DropItemIntoTheWorld(itemBeingDragged);
+    //    }
+    //}
+
+
+    private void AddInputListener()
+    {
+        if (dropItemAction != null)
+        {
+            dropItemAction.action.performed += OnDropInputPerformed;
+            dropItemAction.action.Enable();
+        }
+    }
+
+    private void RemoveInputListener()
+    {
+        if (dropItemAction != null)
+        {
+            dropItemAction.action.performed -= OnDropInputPerformed;
+            dropItemAction.action.Disable();
+        }
+    }
+    private void OnDropInputPerformed(InputAction.CallbackContext context)
+    {
+        if (isHovered)
+        {
+            DropItemIntoTheWorld(gameObject);
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isHovered = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHovered = false;
+    }
+
+    //public void ForceDropFromVR()
+    //{
+    //    DropItemIntoTheWorld(gameObject);
+    //    //Destroy(gameObject);
+    //    //InventorySystem.Instance.ReCalculateList();
+    //}
 }
 
