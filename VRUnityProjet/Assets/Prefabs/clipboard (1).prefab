@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5162286655683571349
+--- !u!1 &1689249558432135307
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,83 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7905604023469512655}
+  - component: {fileID: 31126006439032405}
+  - component: {fileID: 81728010664913662}
+  - component: {fileID: 2836279745119340102}
+  - component: {fileID: 3499713401741475965}
+  - component: {fileID: 3029347607314456552}
+  - component: {fileID: 8670610589183913851}
+  - component: {fileID: 2541082474584568211}
+  - component: {fileID: 8902385799501659978}
   m_Layer: 3
-  m_Name: AttachPoint
+  m_Name: clipboard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7905604023469512655
+--- !u!4 &31126006439032405
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5162286655683571349}
+  m_GameObject: {fileID: 1689249558432135307}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.105, y: 0.001, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 278816827424413892}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7151418808489497889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 278816827424413892}
-  - component: {fileID: 8119698829687463289}
-  - component: {fileID: 4429096339864366709}
-  - component: {fileID: 1911879889324923996}
-  - component: {fileID: 4567114571921214878}
-  - component: {fileID: 4527320886109185421}
-  - component: {fileID: 6535689127538091501}
-  - component: {fileID: 7330030161725799396}
-  m_Layer: 3
-  m_Name: Tweezer_Mode
-  m_TagString: tweezer
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &278816827424413892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.003065759, y: 0.7068532, z: 0.707347, w: 0.0030679}
-  m_LocalPosition: {x: -474.70758, y: 14.32419, z: -492.777}
-  m_LocalScale: {x: 0.9126797, y: 0.9126796, z: 0.9126795}
+  m_LocalRotation: {x: 0.006223801, y: -0.74982387, z: 0.0070540537, w: 0.6615706}
+  m_LocalPosition: {x: -507.36874, y: 14.994671, z: -506.801}
+  m_LocalScale: {x: 2.5500002, y: 2.55, z: 2.55}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7905604023469512655}
+  - {fileID: 5902572473235172988}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -89.96, y: 0, z: 179.503}
---- !u!33 &8119698829687463289
+  m_LocalEulerAnglesHint: {x: 1.078, y: -97.156, z: 0}
+--- !u!33 &81728010664913662
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
-  m_Mesh: {fileID: -3479515558354161011, guid: a3fbc7c7bd494c44bac7bb908e748ed4, type: 3}
---- !u!23 &4429096339864366709
+  m_GameObject: {fileID: 1689249558432135307}
+  m_Mesh: {fileID: 6447410340687490187, guid: cac18234165878c448445cbf6e3ea13a, type: 3}
+--- !u!23 &2836279745119340102
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
+  m_GameObject: {fileID: 1689249558432135307}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -98,8 +67,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ac2e680d73a84f64cb3c5e95772da244, type: 2}
-  - {fileID: 6903082777639242517, guid: a3fbc7c7bd494c44bac7bb908e748ed4, type: 3}
+  - {fileID: 2100000, guid: e5e7c6b0a7699f1488d41dca7085b6b1, type: 2}
+  - {fileID: 1108147716743453759, guid: cac18234165878c448445cbf6e3ea13a, type: 3}
+  - {fileID: -351022541804052484, guid: cac18234165878c448445cbf6e3ea13a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,13 +91,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1911879889324923996
+--- !u!65 &3499713401741475965
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
+  m_GameObject: {fileID: 1689249558432135307}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -140,15 +110,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 0.19, z: 0.010189874}
-  m_Center: {x: 0.09765612, y: -0.0015872553, z: 0.007066902}
---- !u!114 &4567114571921214878
+  m_Size: {x: 0.08870415, y: 0.0081186425, z: 0.13210967}
+  m_Center: {x: -0.000002861023, y: -0.00000047823414, z: 0.0000009536743}
+--- !u!114 &3029347607314456552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
+  m_GameObject: {fileID: 1689249558432135307}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 863f4fb7175b9e647a09e88912b88fcf, type: 3}
@@ -159,33 +129,33 @@ MonoBehaviour:
   isUnlockable: 0
   showCommand: 0
   handInRange: 0
-  itemName: Tweezer
+  itemName: Clipboard
   itemCommand: Press [E] to take
   doorManager: {fileID: 0}
   addToInventoryAction: {fileID: 0}
---- !u!114 &4527320886109185421
+--- !u!114 &8670610589183913851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
+  m_GameObject: {fileID: 1689249558432135307}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da380384466e8e649a32b25533671acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Tweezer
+  itemName: ClipBoard
   itemCommand: Press [A] to take
   addToInventoryAction: {fileID: -6401586360023741937, guid: a2670ebd2e9729144a444035e375488e,
     type: 3}
---- !u!54 &6535689127538091501
+--- !u!54 &2541082474584568211
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
+  m_GameObject: {fileID: 1689249558432135307}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -206,13 +176,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7330030161725799396
+--- !u!114 &8902385799501659978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151418808489497889}
+  m_GameObject: {fileID: 1689249558432135307}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -308,7 +278,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 7905604023469512655}
+  m_AttachTransform: {fileID: 5902572473235172988}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -358,3 +328,34 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!1 &9102427421961010739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5902572473235172988}
+  m_Layer: 3
+  m_Name: attachpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5902572473235172988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9102427421961010739}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.0023, y: 0.0011, z: 0.062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 31126006439032405}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

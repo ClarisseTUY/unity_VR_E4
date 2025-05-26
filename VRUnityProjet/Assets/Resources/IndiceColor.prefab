@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1709450659542955948}
   - component: {fileID: 392080473702803078}
   - component: {fileID: 5677423476636300358}
-  m_Layer: 5
-  m_Name: Rusty Key
+  m_Layer: 3
+  m_Name: IndiceColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,13 +29,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8806568508805601975}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a80a19c2e75f68e4fb10734080a28cac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 524006c8bf31d1448952e72eac9d6a33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -104,13 +104,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
-  thisName: Rusty Key
-  thisDescription: An old key from the hospital
-  thisFunctionality: Can open a door
+  thisName: Indice
+  thisDescription: A paper find in the hospital
+  thisFunctionality: Use it to understand an other indice
   isEquippable: 0
   isNowEquipped: 0
   isSelected: 0
-  worldPrefab: {fileID: 1239736973187618058, guid: c5239655e794c4245b498553cdc8c42f,
+  worldPrefab: {fileID: 6244874648621197932, guid: 4a0a3d42eab0baf44932fb6715c0fa1c,
     type: 3}
 --- !u!114 &392080473702803078
 MonoBehaviour:

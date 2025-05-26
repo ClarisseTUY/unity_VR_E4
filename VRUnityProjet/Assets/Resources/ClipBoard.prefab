@@ -93,12 +93,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 0
   thisName: Clipboard
-  thisDescription: des
-  thisFunctionality: dzdzdad
+  thisDescription: "Synth\xE8ses du S\xE9rum Eveil"
+  thisFunctionality: Indice to find a code. Maybe an other indice can help...
   isEquippable: 0
   isNowEquipped: 0
   isSelected: 0
-  worldPrefab: {fileID: 8189711616776643305, guid: b29e62a888f646e47a651e0c99e4eca7,
+  worldPrefab: {fileID: 1689249558432135307, guid: 216d729be5b1bff4c803688e8bad0a7d,
     type: 3}
 --- !u!225 &4669824420050586718
 CanvasGroup:
@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  dropItemAction: {fileID: 0}
+  dropItemAction: {fileID: 6625841651595738367, guid: a2670ebd2e9729144a444035e375488e,
+    type: 3}
 --- !u!114 &3729463519246380524
 MonoBehaviour:
   m_ObjectHideFlags: 0
